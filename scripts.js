@@ -113,7 +113,14 @@ var messages = [
     {text: "i67's second update to note 8: this is literally me in the messages here (also i lied i am adding more memes)", url: "https://youtu.be/27i42Jb1bPc?si=KPZUIdEMSUBozqs8"},
     {text: "spray that makes you angry", url: "https://youtu.be/wQ0AdNxa118?si=gjn1lU9Jhz_sCMPv"},
     {text: "OMAE WA GONO NIJIMURA OKUYASU NO 'ZA HANDO' GA KESU", url: "https://youtu.be/OhE50kZqA2U?si=dASr18P2BQHI4-ZK"},
-    {text: "number 15", url: "https://youtu.be/TmfVjjdBd3Y?si=abwTspyzaN2CdLy9"}
+    {text: "number 15", url: "https://youtu.be/TmfVjjdBd3Y?si=abwTspyzaN2CdLy9"},
+    {text: "eveee00 was here", font: "Fira Code"},
+    {text: "you playin minecraft?", url: "https://youtu.be/zZtGTCVDMMw?si=muL0G1j3Pam6Ew7u"},
+    {text: "WHAT IS GOING ON HERE?!", url: "https://youtu.be/ZDiltBbhnYI?si=z9L6tJHJ2gp-Zn8i&t=3"},
+    {text: "i67's note 10: you know message 85? Jazza3904 contributed that one. Thanks!", url: "https://www.twitch.tv/jazza3904alt"},
+    {text: "booting...", url: "https://icey67.github.io/webPOST", font: "OCR A"},
+    {text: "something came into the mail today", url: "https://youtu.be/o5bldiDMdLQ?si=d-ND8LrPbnGffuTs&t=2"},
+    {text: ":)", url: "/extras/mystery.html"}
 ];
 
 function messagesindex() { //useful debugging function: check how many messages there are
@@ -130,6 +137,9 @@ function showMessages() { //useful debugging function: show all messages in the 
         var messageText = i + ": '" + messages[i].text + "'";
         if (messages[i].url) {
             messageText += " HAS LINK: " + messages[i].url;
+        }
+        if (messages[i].font) {
+            messageText += " HAS FONT: '" + messages[i].font + "'";
         }
         console.log(messageText);
     }
@@ -163,10 +173,13 @@ function updateFooterMessage(index) {
     } else {
         messageContainer.appendChild(document.createTextNode(randomMessage.text));
     }
+    if (randomMessage.font) {
+        messageContainer.style.fontFamily = randomMessage.font;
+        messageContainer.style.fontSize = "1.5em";
+    }
     console.log("message updated to: " + index);
-}
 // Example usage: updateFooterMessage(0); // This will update the footer with the first message
-
+}
 document.addEventListener('DOMContentLoaded', function() {
     updateFooterMessage(Math.floor(Math.random() * messages.length));
 });
@@ -221,10 +234,28 @@ function openTab(evt, tabName) {
         tabElement.style.display = "block";
         if (evt) {
             evt.currentTarget.className += " active";
+        } else {
+            // Find the tab button and add the active class
+            var activeButton = document.querySelector(`.tablinks[data-city="${tabName}"]`);
+            if (activeButton) {
+                activeButton.className += " active";
+            }
         }
-    } else {
+    }
+    else {
         console.error(`Tab with ID ${tabName} does not exist.`);
     }
+
+    toggleMenuOff()
+}
+
+function toggleMenu() {
+    var tabs = document.querySelector('.tab');
+    tabs.classList.toggle('active'); // Toggle the active class to show/hide tabs
+}
+function toggleMenuOff() {
+    var tabs = document.querySelector('.tab');
+    tabs.classList.remove('active'); // Remove the active class to hide tabs
 }
 
 // Retrieve the active tab from localStorage when the page loads

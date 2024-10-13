@@ -1,0 +1,11 @@
+body {
+    background-color: black;
+    overflow: hidden;
+}
+
+.mystery {
+    position: fixed;
+    width: 720px;
+    top: 15%;
+    left: 15%;
+}

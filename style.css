@@ -9,6 +9,11 @@ body, .bttn, .bttnwide, .title, .titlesubtext, .mainInfo, .discordInfo, .bttnInf
     color: white;
 }
 
+.eveee {
+    font-family: 'Fira Code SemiBold', monospace;
+    color: white;
+}
+
 .content {
     flex: 1;
     display: flex;
@@ -184,6 +189,20 @@ a {
     transition: 0.3s;
 }
 
+.socialbttnlogo {
+    position: relative;
+    top: 10px;
+    right: 5px;
+}
+
+.socialbttnlogoContainer {
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    top: 0px;
+    right: 5px;
+}
+
 .socialbttn:hover {
     background-color: rgba(0, 0, 0, 0.7);
 }
@@ -191,7 +210,6 @@ a {
 .socialbuttonsContainer {
     display: flex;
     flex-direction: row;
-    align-items:flex-end;
 }
 
 @media screen and (max-width: 768px) {
@@ -224,7 +242,7 @@ a {
         left: 50%;  /* chatgpt said 0% would work, it did not, jank fix: 50% left */
         width: 100vw; /* Fullscreen width */
         height: 100vh; /* Fullscreen height */
-        background-color: rgba(0, 0, 0, 0.9); /* Dark background with transparency */
+        background-color: rgba(0, 0, 0, 0.7); /* Dark background with transparency */
         border-radius: 10px;
         z-index: 1000; /* Make sure it appears on top */
         flex-direction: column; /* Stack the tabs vertically */
@@ -249,6 +267,25 @@ a {
 
     .tab button:hover {
         background-color: rgba(255,255,255,0.2)
+    }
+    
+    .socialbttnlogoContainer {
+        position: relative;
+        display: flex;
+        align-self: center;
+        flex-direction: column;
+        top: 0px;
+        margin-bottom: 20px;
+        left: 5px;
+    }
+    .socialbttn {
+        padding: 15px;
+        font-size: 21px;
+        flex-direction: column;
+    }
+    .socialbuttonsContainer {
+        flex-direction: row;
+        justify-content: center;
     }
 }
 
@@ -339,4 +376,8 @@ body.light-mode .bttn:hover, body.light-mode .socialbttn:hover {
 body.light-mode .disclaimer {
     background-color: rgba(255, 255, 255, 0.2);
     box-shadow: 0px 4px 15px rgba(255, 255, 255, 0.3);
+}
+
+.content.light-mode {
+    background-color: rgba(255, 255, 255, 0.2);
 }

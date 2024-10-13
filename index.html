@@ -9,6 +9,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Odibee+Sans&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@300..700&display=swap" rel="stylesheet">
     <link rel="icon" type="image" href="/media/i67websiteicon.ico">
 </head>
 <body>
@@ -21,12 +22,6 @@
         <button class="tablinks" data-city="specs" onclick="openTab(event, 'specs')">specs</button>
         <button class="tablinks" data-city="cool things" onclick="openTab(event, 'cool things')">cool things</button>
     </div>
-    <script>
-        function toggleMenu() {
-            var tabs = document.querySelector('.tab');
-            tabs.classList.toggle('active'); // Toggle the active class to show/hide tabs
-        }
-    </script>
     <div class="content">
         <div class="mainlogo">
             <img id="logo" src="/media/IceyBanner.png" alt="mainlogo" />
@@ -59,17 +54,23 @@
             <div class="socialbuttonsContainer">
                 <div class="bttnContainer">
                     <button type="button" class="socialbttn" onclick="window.open('https://www.youtube.com/@icey6719', '_blank')" style="color: red">
-                        <img src="/media/youtube-logo.svg" alt="YouTube" height="15" style="margin-top:8px; margin-right: 8px;"> my youtube
+                    <div class="socialbttnlogoContainer">
+                        <img src="/media/youtube-logo.svg" class="socialbttnlogo" alt="YouTube" height="15">
+                    </div> my youtube
                     </button>
                 </div>
                 <div class="bttnContainer">
                     <button type="button" class="socialbttn" onclick="window.open('https://www.twitch.tv/icey_67', '_blank')" style="color: purple">
-                        <img src="/media/twitch-logo.svg" alt="Twitch" height="20" style="margin-top:8px; margin-right: 8px;"> my twitch
+                        <div class="socialbttnlogoContainer">
+                        <img src="/media/twitch-logo.svg" alt="Twitch" height="20" class="socialbttnlogo"> 
+                    </div>my twitch
                     </button>
                 </div>
                 <div class="bttnContainer">
                     <button type="button" class="socialbttn" onclick="window.open('https://www.twitter.com/icey67_og', '_blank')" style="color: #249ef0">
-                        <img src="/media/twitter-logo.svg" alt="Twitter" height="20" style="margin-top: 8px; margin-right: 8px;"> my twitter
+                        <div class="socialbttnlogoContainer">
+                        <img src="/media/twitter-logo.svg" alt="Twitter" height="20" class="socialbttnlogo"> </div>
+                        my twitter
                     </button>
                 </div>
             </div>
@@ -93,7 +94,7 @@
                         <p>website you're currently on.</p>
                     </div>
                     <div class="containerBttn">
-                        <button type="button" class="bttn" onclick="window.open('https://www.github.com/icey67/webPOST', '_blank')">ISB on web</button>
+                        <button type="button" class="bttn" onclick="window.open('https://icey67.github.io/webPOST', '_blank')">ISB on web</button>
                     </div>
                     <div class="bttnInfo">
                         <p>IceySystemsBIOS on the web, another thing i copied from eveee00</p>
