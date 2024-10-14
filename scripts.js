@@ -107,7 +107,7 @@ var messages = [
     {text: "POV: Icey67/eveee00 90% of the time ", url: "https://youtu.be/RjJDCTgBJHA?si=yCnP2T-RYM95ELYw"}, /* even though we mostly use ai to code lmao (my brother is disappointed in me probably) -i67 */
     {text: "glueeeee", url: "https://youtu.be/kfH26ODWOhU?si=lKRFUgQr-GRWYzMy"},
     {text: "r/bossfight moment", url: "https://youtu.be/zrfmKu5VKxA?si=zY8klVSJeRBbeDxh"},
-    {text: "yessss when they give me a shot i'm gonna go like PFEEEE-*BAM*", url: "https://youtu.be/PdVSd9goqGM?si=kVgwcVO3k4BrfQfg&t=10"},
+    {text: "yessss when they give me a shot i'm gonna go like PFEEEE-*BAM*", url: "https://www.youtube.com/watch?v=PdVSd9goqGM&t=10s"},
     {text: "mango on a fork", url: "https://youtu.be/P2D-AuFDnE0?si=xnRZTfx6HZ206WSi"},
     {text: "i67's update to note 8: i added more memes. and i am done for now."},
     {text: "i67's second update to note 8: this is literally me in the messages here (also i lied i am adding more memes)", url: "https://youtu.be/27i42Jb1bPc?si=KPZUIdEMSUBozqs8"},
