@@ -120,7 +120,8 @@ var messages = [
     {text: "i67's note 10: you know message 85? Jazza3904 contributed that one. Thanks!", url: "https://www.twitch.tv/jazza3904alt"},
     {text: "booting...", url: "https://icey67.github.io/webPOST", font: "OCR A"},
     {text: "something came into the mail today", url: "https://youtu.be/o5bldiDMdLQ?si=d-ND8LrPbnGffuTs&t=2"},
-    {text: ":)", url: "/extras/mystery.html"}
+    {text: ":)", url: "/extras/mystery.html"},
+    {text: "BIDOOF PRIME: ARCEUS' FEAR", url:"https://youtu.be/e1aAvWGPIJs"}
 ];
 
 function messagesindex() { //useful debugging function: check how many messages there are
