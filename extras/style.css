@@ -1,0 +1,204 @@
+/* General styles */
+html, body {
+    height: 100%;
+}
+
+p {
+        position: absolute;
+        color:white;
+        font-size: 25px;
+        top: 5%;
+        width: display;
+        word-wrap: break-word;
+}
+
+h1 {
+        position: absolute;
+        color: white;
+        font-size: 30px;
+        left: 50%;
+        transform: translateX(-50%);
+}
+
+@media screen and (max-width: 768px) {
+    h1 {
+        font-size: 25px;
+    }
+}
+
+body {
+    background-image: url("/media/I67Background.png");
+    background-repeat: no-repeat;
+    background-size: cover; 
+    background-position: center;
+    font-family: 'Odibee Sans', monospace;
+    display: flex;
+    flex-direction: column;
+    background-attachment: fixed;
+}
+
+.mainlogo img {
+    position: absolute;
+    top: 0px;
+    left: 25px;
+    width: 200px;
+    height: auto;
+    z-index: 1000;
+}
+
+text {
+    color: white;
+}
+
+.content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.title, .titlesubtext, .mainInfo, .discordInfo, .bttnInfo {
+    color: rgb(255, 255, 255);
+}
+
+.title {
+    font-size: 50px;
+    margin-bottom: 1px;
+}
+
+.titlesubtext {
+    font-size: 50px;
+    margin-top: 1px;
+}
+
+.mainInfo {
+    font-size: 40px;
+    margin-top: 1px;
+}
+
+.buttonsContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.containerBttn {
+    margin: 5px 0;
+}
+
+.bttn {
+    background-color: #00aaaa;
+    color: #00ffff;
+    border: 2px solid #00ffff;
+    padding: 5px 15px;
+    cursor: pointer;
+    width: 130px;
+    height: 40px;
+    font-family: 'Odibee Sans', monospace;
+    font-size: 22px;
+}
+
+.bttn:hover {
+    background-color: #555555;
+    color: white;
+    border: #555555;
+}
+
+.disclaimer {
+    position: fixed;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 25px;
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(10px);
+    color: #ffffff;
+    text-align: center;
+    padding: 10px 20px;
+    border-radius: 20px;
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.3);
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 1825px;
+}
+
+.top-logo {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    border: 3px transparent #ffffff;
+    padding: 20px;
+}
+
+.noteMS {
+    margin-right: 10px;
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+}
+
+.music-note {
+    margin-right: 5px;
+}
+
+
+.tab {
+    position: fixed;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(10px);
+    border-radius: 20px;
+    padding: 10px;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.3);
+    z-index: 1000;
+    font-family: 'Odibee Sans', monospace;
+}
+
+
+.tab button {
+    background-color: transparent;
+    color: white;
+    float: left;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 14px 20px;
+    transition: 0.3s;
+    border-radius: 10px;
+    font-size: 30px;
+    font-family: 'Odibee Sans', monospace;
+}
+
+
+.tab button:hover {
+    background-color: rgba(255, 255, 255, 0.3);
+}
+
+
+.tab button.active {
+    background-color: rgba(255, 255, 255, 0.5);
+}
+
+
+.tabcontent {
+    display: none;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 20px;
+    margin-top: 100px;
+    backdrop-filter: blur(10px);
+}
+
+.bttnInfo {
+    color: rgb(255, 255, 255);
+    font-size: 30px;
+    margin-top: 1px;
+}
