@@ -1,290 +1,48 @@
-body {
-    background-image: url("media/I67Background.png");
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-attachment: fixed;
-    background-position: center;
-    overflow-y: auto;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
+:root{
+    font-family: "Odibee Sans", serif;
+    color: white;
+    text-align: center;
+}
+body{
+    background-color: black;
     margin: 0;
 }
-
-body {
-    font-family: "Odibee Sans";
-    color: white;
-}
-
-h1, h2, h3, h4, table, th, tr {
-    font-weight: normal;
-}
-
-h1 {
-    font-size: 60px;
-}
-
-h2 {
-    font-size: 40px;
-}
-
-h3 {
-    font-size: 30px;
-}
-
-.tab {
-    font-size: 20px;
-    cursor: pointer;
-}
-
-p, table {
-    font-size: 25px;
-}
-
-.topbar {
+nav{
     display: block;
-    background-color: rgba(0, 0, 0, 0.5);
-    position: fixed;
-    left: 0;
-    right: 0;
     top: 0;
-    height: 89px;
+    position: sticky;
+    outline: 5px solid cyan;
+    background-color: black;
+    height: 85px;
 }
-
-#logo {
-    z-index: 1;
-    position: fixed;
+.nav-container{
     display: flex;
-    top: 0;
-    left: 0;
-    width: 225px;
-}
-
-#github {
-    z-index: 1;
-    position: fixed;
-    top: 20px;
-    right: 10px;
-    width: 40px;
-    cursor: pointer;
-}
-
-.tab-bar {
-    z-index: 2;
-    display: flex;
-    padding: 10px 50px;
-    background-color: rgba(0, 0, 0, 0.5);
-    position: fixed;
-    top: 10px;
-    left: 50%;
-    transform: translateX(-50%);
-    clip-path: polygon(10% 0%, 90% 0%, 100% 50%, 90% 100%, 10% 100%, 0% 50%);
-}
-
-.tab-bar a {
-    z-index: 1;
-    color: white;
-    text-decoration: none;
-    padding: 10px 20px;
-    margin: 0 30px;
-}
-
-.tab-bar a.active {
-    color: black;
-    transition: color 0.2s ease;
-}
-
-.tabbutton {
-    z-index: 1;
-    position: absolute;
-    height: 40px;
-    background-color: cyan;
-    transition: left 0.2s ease, width 0.2s ease;
-    clip-path: polygon(10% 0%, 90% 0%, 100% 50%, 90% 100%, 10% 100%, 0% 50%);
-}
-
-.main {
-    z-index: 0;
-    padding: 20px;
-    background-color: rgba(0, 0, 0, 0.5);
-    border-radius: 25px;
-    backdrop-filter: blur(100px);
-    text-align: center;
-    box-sizing: border-box;
-    width: 75%;
-    max-height: calc(100vh - 200px); /* Adjust height to fit within viewport */
-    overflow-y: auto; /* Enable vertical scrolling */
-}
-
-button {
-    display: inline-block;
-    margin: 10px;
-    margin-bottom: 30px;
-    padding: 10px 20px;
-    clip-path: polygon(20% 0%, 80% 0%, 100% 50%, 80% 100%, 20% 100%, 0% 50%);
-    text-align: center;
-    box-sizing: border-box;
-    transition: background-color 0.2s ease, color 0.2s ease;
-    font-family: 'Odibee Sans';
-    font-size: 25px;
-    cursor: pointer;
-}
-
-#yt {
-    color: red;
-    background-color: rgba(255,0,0,0.5);
-    border: 2px solid red;
-}
-
-#yt:hover {
-    background-color: rgba(255,0,0,0.75);
-    color: white;
-}
-
-#birb {
-    color: #249ef0;
-    background-color: rgba(36,158,240,0.5);
-    border: 2px solid #249ef0;
-}
-
-#birb:hover {
-    background-color: rgba(36,158,240,0.75);
-    color: white;
-}
-
-#stream {
-    color: #6116EA;
-    background-color: rgba(97,22,234,0.5);
-    border: 2px solid #6116EA;
-}
-
-#stream:hover {
-    background-color: rgba(97,22,234,0.75);
-    color: white;
-}
-
-.center-image {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    width: 400px;
-    cursor: pointer;
-}
-
-#projectbutton {
-    display: inline-block;
-    width: 200px;
-    cursor: pointer;
-    background-color: rgba(0, 0, 0, 0.5);
-    border: none;
-    color: white;
-    margin: 0;
-}
-
-#projectbutton:hover {
-    background-color: rgba(0, 0, 0, 0.75);
-}
-
-.projectdesc {
-    display: block;
-    padding: 20px;
-    background-color: rgba(0, 0, 0, 0.5);
-    text-align: center;
-    box-sizing: border-box;
-    width: 500px;
-    clip-path: polygon(20% 0%, 80% 0%, 100% 50%, 80% 100%, 20% 100%, 0% 50%);
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 0;
-    margin-bottom: 25px;
-}
-
-.disclaimer {
-    display: flex;
-    background-color: rgba(0,0,0,0.3);
-    position: absolute;
-    bottom: 0px;
-    left: 0;
-    right: 0;
-    width: auto;
-    padding: 10px;
-    height: auto;
     align-items: center;
-    justify-content: center;
-    z-index: 1;
-    position: fixed;
+    justify-content: space-between;
+    flex-direction: row;
+    flex-wrap: nowrap;
 }
-
-.message-container {
+.nav-elements{
     display: flex;
     flex-direction: row;
-    color: white;
-    font-family: 'Odibee Sans', monospace;
-    bottom: 0px;
-    font-size: 30px;
-    text-align: center;
-    overflow-y: auto;
-    max-height: 50px;
+    flex-wrap: nowrap;
+    align-items: center;
 }
-
-/* Style the scrollbar track */
-::-webkit-scrollbar {
-    width: 7px; /* Width of the scrollbar */
+.logo-image{
+    width: 250px;
 }
-
-/* Style the scrollbar thumb */
-::-webkit-scrollbar-thumb {
-    background-color: #00ffff; /* Color of the scrollbar thumb */
+.menu-item{
+    text-decoration: none;
+    color: cyan;
+    align-items: center;
 }
-
-/* Style the scrollbar track */
-::-webkit-scrollbar-track {
-    background-color: #000000; /* Color of the scrollbar track */
+.github-logo{
+    width: 50px;
+    cursor: pointer;
+    padding-right: 10px;
 }
-
-.hamburger {
-    display: none;
-}
-
-@media screen and (max-width: 1215px) {
-    .tab-bar {
-        display: none;
-        background-color: rgba(0, 0, 0);
-        position: fixed;
-        top: 60px;
-        width: 100px;
-        clip-path: unset;
-        border-radius: 10px;
-        justify-content: center;
-        flex-direction: column;
-    }
-
-    .tab-bar.active {
-        display: flex;
-    }
-
-    .tab-bar a {
-        padding: unset;
-        margin: 10px;
-        position: relative;
-    }
-
-    .tab-bar a.active {
-        background-color: #00ffff;
-    }
-
-    .tabbutton {
-        display: none;
-    }
-
-    .hamburger {
-        display: block;
-        z-index: 2;
-        position: fixed;
-        top: 20px;
-        left: 49%;
-        cursor: pointer;
-        font-size: 30px;
-    }
+section{
+    position: inherit;
+    margin: 1em auto 2em;
+    padding-top: 1rem;
 }

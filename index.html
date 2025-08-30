@@ -1,94 +1,82 @@
 <!DOCTYPE html>
-<title>Icey's Website</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Odibee+Sans&display=swap" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@300..700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style.css">
-<script src="script.js"></script>
-<link rel="icon" type="image" href="/media/i67websiteicon.ico">
-
+<html lang="en">
+<head>
+    <title>Icey's Website</title>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Odibee+Sans&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@300..700&display=swap" rel="stylesheet">
+    <link rel="icon" type="image" href="/media/i67websiteicon.ico">
+</head>
 <body>
-    <div class="topbar">
-        <img id="logo" src="media/IceyBanner.png" title="Icey67">
-        <img id="github" src="media/github-mark-white.svg" title="My Github" onclick="window.open('https://www.github.com/icey67', '_blank')">
-    </div>
-    <div class="hamburger" onclick="toggleTabMenu()">☰</div>
-    <div class="tab-bar">
-        <div class="tabbutton"></div>
-        <a class="tab" href="#home" onclick="showSection('home', this)">Home</a>
-        <a class="tab" href="#socials" onclick="showSection('socials', this)">Socials</a>
-        <a class="tab" href="#projects" onclick="showSection('projects', this)">Projects</a>
-        <a class="tab" href="#specs" onclick="showSection('specs', this)">Specs</a>
-        <a class="tab" href="#cool things" onclick="showSection('cool things', this)">Cool</a>
-    </div>
-    
-    <div class="main" id="home">
-        <h1>Welcome to <e style="color: cyan">Icey</e>'s Website</h1>
-        <p>Nice to see you here! I am <e style="color: cyan;">Icey</e><e style="color: #7100ff">6</e><e style="color: #ffff00">7</e> - a.k.a <e style="color: cyan;">Icey</e>.</p>
-        <p>I am interested with all things in computers, especially system integration.</p>
-        <p>I shall store my social media links and other projects in here</p>
-        <p>While not much is really active, I hopefully plan to do things in the future.</p>
-        <p>Due to me not being a good programmer is one of the reasons I don't do much programming in the first place.</p>
-        <p>Honestly, this whole website was borrowed from mine and eveee's code. lmao</p>
-        <p>But I am still learning and I hope to improve my skills in the future.</p>
-    </div>
-    <div class="main" id="socials">
-        <h1>Socials</h1>
-        <h3>Here are my social media links:</h3>
-        <div class="socialbuttoncontainer">
-            <button onclick="window.open('https://www.youtube.com/@icey6719', '_blank')" id="yt">YouTube</button>
-            <button onclick="window.open('https://twitter.com/icey67_og', '_blank')" id="birb">Twitter</button>
-            <button onclick="window.open('https://www.twitch.tv/icey_67', '_blank')" id="stream">Twitch</button>
-            <img class="center-image" id="discord-status" src="https://lanyard.cnrad.dev/api/469059297033191425?showDisplayName=true" alt="Discord Status" onclick="window.open('https://discord.com/users/469059297033191425', )">
-        </div> 
-    </div>
-    <div class="main" id="projects">
-        <h1>Projects</h1>
-        <h3>Not much here, but hey, it's something.</h3>
-        <h3>:P</h3>
-        <div class="projectcontainer">
-            <button onclick="window.open('https://www.github.com/icey67/icey67.github.io', '_blank')" id="projectbutton">This Website</button>
-            <p class="projectdesc">Github repo of the page you're currently on</p>
+<!-- fuck ass top bar -->
+<nav>
+    <div class="nav-container">
+        <div class="nav-elements">
+            <div class="logo">
+                <a href="index.html"><img src="/media/IceyBanner.png" alt="Icey's Logo" class="logo-image"></a>
+            </div>
         </div>
-        <div class="projectcontainer">
-            <button onclick="window.open('https://www.github.com/icey67/webPOST', '_blank')" id="projectbutton">ISB on web</button>
-            <p class="projectdesc">Another thing I copied from eveee00</p>
+        <div class="nav-elements">
+            <div class="menu">
+                <a href="index.html" class="menu-item">Home</a>
+                <a href="socials.html" class="menu-item">Socials</a>
+                <a href="projects.html" class="menu-item">Projects</a>
+                <a href="specs.html" class="menu-item">Specs</a>
+                <a href="coolthings.html" class="menu-item">Cool Things</a>
+            </div>
+        </div>
+        <div class="nav-elements">
+            <div class="github">
+                <a href="https://github.com/Icey67/"><img src="media/github-mark-white.svg" alt="Icey's Github" class="github-logo"></a>
+            </div>
         </div>
     </div>
-    <div class="main" id="specs">
-        <h1>PC Specs</h1>
-        <h4>don't bother rebuilding this, it's bad</h4>
-        <h2>Here are my PC specs:</h2>
-        <p>CPU: AMD Phenom II X6 1090T</p>
-        <p>GPU: XFX AMD Radeon RX 6650 XT</p>
-        <p>RAM: some weird knock off brand from <e onclick="window.open('https://www.amazon.com', '_blank')">amazon</e>, DDR3 16GB at 1333MHz</p>
-        <p>MOBO: ASRock M5A87</p>
-        <p>STORAGE: SanDisk SSD PLUS 1TB, Hitachi HDS721050CLA362 500GB, Some DVD Drive: currently unplugged</p>
-        <p>PSU: MSI MAG A650GL 650W</p>
-        <p>OS: AtlasOS v0.4.0</p>
-    </div>
-    <div class="main" id="cool things">
-        <h1>Cool Things</h1>
-        <h3>Here are some cool things I found:</h3>
-        <div class="projectcontainer">
-            <button id="projectbutton" onclick="window.open('https://eveee00.xyz', '_blank')">eveee00.xyz</button>
-            <p>A website made by eveee00, which I copied from</p>
-        </div>
-        <div class="projectcontainer">
-            <button id="projectbutton" onclick="window.open('https://eveee00.github.io/webPOST', '_blank')">webPOST</button>
-            <p>A website recreation of an old computer's POST, made by eveee00</p>
-        </div>
-        <div class="projectcontainer">
-            <button id="projectbutton" onclick="window.open('https://roterzeiger.github.io/', '_blank')">Roterzeiger</button>
-            <p>A website made by Roterzeiger</p>
-        </div>
-        <div class="projectcontainer">
-            <button id="projectbutton" onclick="window.open('https://roterzeiger.github.io/amogus/', '_blank')">?</button>
-            <p>GET OUT OF MY HEAD!!! WARNING: earrape</p>
-        </div>
-    </div>
-    <footer class="disclaimer" id="footer">
-        <div class="message-container">loading...</div>
-    </footer>
+</nav>
+<!-- and that's the end of that -->
+<div class="content">
+    <section>
+        <h1>Welcome to <span style="color: cyan">Icey</span>'s Website</h1>
+        <p>
+            N<i style="color: cyan">ice</i> to see you here, I am
+            <span style="color: cyan;">Icey</span><span style="color: #7100ff">6</span><span style="color: yellow">7</span>, often called
+            <span style="color: cyan;">Icey</span>
+            <br>
+            I am quite the tech enthusiast, and I love to code (sorta) and tinker with computers.
+            <br>
+            I currently indulge in C#, HTML/CSS and a bit of JavaScript, just because. That's why this page exists.
+            <br>
+            <i>well not all too willingly C#, that's being taught to me via my school.</i>
+            <br>
+            As you can see via the disclaimer up top; this is a work in progress, and will be for a while until I fully learn HTML/CSS and JavaScript.
+            <br>
+            <i>For example: the navigation bar in the middle is quite jank</i>
+            <br>
+            <i>...anyway.</i>
+            <br>
+            This page will be a hub for my projects, social media (if any at all), and other cool things I find on the internet.
+            <br>
+            And I guess other funny things I find, like memes and whatnot.
+            <br>
+            <i>
+                please send help github copilot writes my scentences instantly, this is currently pure vibecoding i don't want to depend on AI please send help immediately
+                <br>
+                ykw, i'm disabling the copilot plugin because fuck
+                <br>
+                also i'm copying some bits and pieces of code from <a href="https://leo.might-be.gay/">another friends page</a> and eveee's/my old website because ..licensing?
+            </i>
+        </p>
+    </section>
+    <section>
+        <h1>More about myself</h1>
+        <p>
+            Huh, what?
+            <br>
+            fuck
+        </p>
+    </section>
+</div>
 </body>
+</html>
