@@ -9,6 +9,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Odibee+Sans&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@300..700&display=swap" rel="stylesheet">
     <link rel="icon" type="image" href="/media/i67websiteicon.ico">
+    <script src="navbar.js" type="module"></script>
 </head>
 <body>
 <!-- fuck ass top bar -->
@@ -26,6 +27,7 @@
                 <a href="projects.html" class="menu-item">Projects</a>
                 <a href="specs.html" class="menu-item">Specs</a>
                 <a href="coolthings.html" class="menu-item">Cool Things</a>
+                <a href="blog.html" class="menu-item">Ice Blogs</a>
             </div>
         </div>
         <div class="nav-elements">
@@ -36,6 +38,15 @@
     </div>
 </nav>
 <!-- and that's the end of that -->
+<!-- crude implementation of leo's warning banner -->
+<div id="navbar-wip-banner" class="nav-banner-secondary nav-banner-hidden" role="alert" style="display:inherit;">
+    <div class="nav-container nav-elements nav-banner-secondary" style="color:white; font-size:large;">
+        <span>WARNING: This site is very much a WIP, do contact me if you notice anything weird.</span>
+        <span id="navbar-wip-dismiss" class="clickable">Dismiss X</span>
+    </div>
+</div>
+<!-- it no no wanna go away after clicking and reloading ;-; -->
+<!-- fafer -->
 <div class="content">
     <section>
         <h1>Welcome to <span style="color: cyan">Icey</span>'s Website</h1>
@@ -44,39 +55,60 @@
             <span style="color: cyan;">Icey</span><span style="color: #7100ff">6</span><span style="color: yellow">7</span>, often called
             <span style="color: cyan;">Icey</span>
             <br>
-            I am quite the tech enthusiast, and I love to code (sorta) and tinker with computers.
+            I am quite the tech enthusiast, and I love to tinker with computers, occasionally coding too.
             <br>
             I currently indulge in C#, HTML/CSS and a bit of JavaScript, just because. That's why this page exists.
             <br>
             <i>well not all too willingly C#, that's being taught to me via my school.</i>
             <br>
-            As you can see via the disclaimer up top; this is a work in progress, and will be for a while until I fully learn HTML/CSS and JavaScript.
+            As you can see via the disclaimer up top; this is a work in progress, and will be for a while until I fully learn HTML, CSS and JavaScript.
             <br>
-            <i>For example: the navigation bar in the middle is quite jank</i>
-            <br>
-            <i>...anyway.</i>
-            <br>
-            This page will be a hub for my projects, social media (if any at all), and other cool things I find on the internet.
+            This page will be a hub for my projects, social media (if any at all), and other cool things I find on the internet. (Oh and I supposedly blog too now.)
             <br>
             And I guess other funny things I find, like memes and whatnot.
             <br>
-            <i>
-                please send help github copilot writes my scentences instantly, this is currently pure vibecoding i don't want to depend on AI please send help immediately
-                <br>
-                ykw, i'm disabling the copilot plugin because fuck
-                <br>
-                also i'm copying some bits and pieces of code from <a href="https://leo.might-be.gay/">another friends page</a> and eveee's/my old website because ..licensing?
-            </i>
+            Also, I'm copying some bits and pieces of code from <a href="https://leo.might-be.gay/" id="leo-link">another friends page</a> and eveee's/my old website because I can, even legally.
         </p>
     </section>
     <section>
-        <h1>More about myself</h1>
+        <h1>More about <span style="color:cyan;">Icey</span><span style="color:#7100ff">6</span><span style="color:yellow">7</span></h1>
         <p>
-            Huh, what?
+            Oh, so you want to know more about myself?
             <br>
-            fuck
+            Interesting, I guess I can humor you. Do not expect me to tell you my real name and anything else personal though.
+            <br>
+            So, as you may know, I am <span style="color:cyan;">Icey</span>. And I love to mess around with computers and in general, technology.
+            <br>
+            For instance, I used Linux a while back on my main PC, I do plan on doing that again eventually, though considering that it's in a relatively rough shape, that'll be hard.
+            <br>
+            I suppose you can classify me as an adolescent, though again, don't expect me to tell you my age; unless you know me personally.
+            <br>
+            Pronouns? Yeah, I guess I go by he/him, I jokingly put <span style="color:cyan;">ice</span>/<span style="color: cyan">ice</span>m on my Discord though, you can probably guess why. :P
+            <br>
+            Now I do not know what else I can tell you about myself, I'll do that later. <i>later meaning another time when I work on this site.</i>
+        </p>
+    </section>
+    <section>
+        <h1>About this page</h1>
+        <p>
+            Well, as I've said before, this page exists via HTML, CSS and JavaScript.
+            <br>
+            Nothing else eventful about it, it's being hosted by our lord and saviour (maybe) <a href="https://github.com/">GitHub</a>
+            <br>
+            I would want to host it myself with a custom domain and Cloudflare, <span style="font-family:'Fira Code', monospace">eveee00</span> offered to give me his domain <a href="https://eveee00.xyz" style="font-family:'Fira Code', monospace; color: white;">eveee00.xyz</a>
+            <br>
+            so it would be <span style="color: cyan">Icey</span><span style="color: #7100ff">6</span><span style="color:yellow">7</span>.<span style="font-family:'Fira Code', monospace;">eveee00.xyz</span>
+            <br>
+            Which (no offense eveee xd) would be a bit funky/weird
+            <br>
+            So that is undecided so far, besides it's currently not too possible for me, for reasons I shan't name. (shan't??)
         </p>
     </section>
 </div>
+<footer>
+    <div class="message-container">
+        loading
+    </div>
+</footer>
 </body>
 </html>
