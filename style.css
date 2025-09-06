@@ -32,8 +32,9 @@ nav{
 .nav-banner-secondary{
     display: flex;
     padding: 10px;
-    background-color: red;
+    background-color: #aa0000;
     font-size: 20px;
+    text-shadow: 0 0 5px #000000;
 }
 .nav-banner-hidden{
     display: none;
@@ -169,7 +170,7 @@ button#bluesky{
     border: 2px solid #1185FE;
 }
 button#bluesky:hover img#bluesky{
-    content: url(socialicons/bluesky_highlight.svg);
+    content: url(socialicons/Bluesky_highlight.svg);
 }
 button#bluesky:hover{
     background-color: #1185FE;
@@ -193,4 +194,7 @@ button#general:hover{
     background-color: #7100ff;
     color: yellow;
     border: 2px solid #7100ff;
+}
+p{
+    margin-top: 10px;
 }
