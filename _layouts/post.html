@@ -3,14 +3,15 @@
 <head>
     <title>Icey's Website</title>
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Odibee+Sans&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@300..700&display=swap" rel="stylesheet">
     <link rel="icon" type="image" href="/media/i67websiteicon.ico">
-    <script src="navbar.js" type="module"></script>
-    <script src="script.js"></script>
+    <script src="/navbar.js" type="module"></script>
+    <script src="/script.js" type="module"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 <body>
 <!-- fuck ass top bar -->
@@ -18,17 +19,17 @@
     <div class="nav-container">
         <div class="nav-elements">
             <div class="logo">
-                <a href="index.html"><img src="/media/IceyBanner.png" alt="Icey's Logo" class="logo-image"></a>
+                <a href="../index.html"><img src="/media/IceyBanner.png" alt="Icey's Logo" class="logo-image"></a>
             </div>
         </div>
         <div class="nav-elements">
             <div class="menu">
-                <a href="index.html" class="menu-item">Home</a>
-                <a href="socials.html" class="menu-item">Socials</a>
-                <a href="projects.html" class="menu-item">Projects</a>
-                <a href="specs.html" class="menu-item">Specs</a>
-                <a href="coolthings.html" class="menu-item">Cool Things</a>
-                <a href="blog.html" class="menu-item">Ice Blogs</a>
+                <a href="/index.html" class="menu-item">Home</a>
+                <a href="/socials.html" class="menu-item">Socials</a>
+                <a href="/projects.html" class="menu-item">Projects</a>
+                <a href="/specs.html" class="menu-item">Specs</a>
+                <a href="/coolthings.html" class="menu-item">Cool Things</a>
+                <a href="/blog.html" class="menu-item">Ice Blogs</a>
             </div>
         </div>
         <div class="nav-elements">
@@ -48,13 +49,16 @@
 </div>
 <!-- it no no wanna go away after clicking and reloading ;-; -->
 <!-- fafer -->
-<div class="content">
-    <section>
-        <h1><span style="color: cyan">Icey</span>'s Weblog</h1>
-        <sub>Look ma! I'm a blogger! <i>she isn't proud.</i></sub>
-        <p>COMING SOON</p>
-    </section>
-</div>
+<section style="display: grid; margin-bottom: 100px;">
+    <a style="display: grid; justify-self: left;" href="/blog.html">← Back</a>
+    {% if page.previous %}
+        <a style="display: grid; justify-self: left;" href="{{ page.previous.url }}">← Previous</a>
+    {% endif %}
+    {{ content }}
+    {% if page.next %}
+        <a style="display: grid; justify-self: right;" href="{{ page.next.url }}">Next →</a>
+    {% endif %}
+</section>
 <footer>
     <div class="message-container">
         loading

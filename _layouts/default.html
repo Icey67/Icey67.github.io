@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Icey's Website</title>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="../style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Odibee+Sans&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@300..700&display=swap" rel="stylesheet">
+    <link rel="icon" type="image" href="/media/i67websiteicon.ico">
+    <script src="../navbar.js" type="module"></script>
+    <script src="../script.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+<!-- fuck ass top bar -->
+<nav>
+    <div class="nav-container">
+        <div class="nav-elements">
+            <div class="logo">
+                <a href="../index.html"><img src="/media/IceyBanner.png" alt="Icey's Logo" class="logo-image"></a>
+            </div>
+        </div>
+        <div class="nav-elements">
+            <div class="menu">
+                <a href="../index.html" class="menu-item">Home</a>
+                <a href="../socials.html" class="menu-item">Socials</a>
+                <a href="../projects.html" class="menu-item">Projects</a>
+                <a href="../specs.html" class="menu-item">Specs</a>
+                <a href="../coolthings.html" class="menu-item">Cool Things</a>
+                <a href="../blog.html" class="menu-item">Ice Blogs</a>
+            </div>
+        </div>
+        <div class="nav-elements">
+            <div class="github">
+                <a href="https://github.com/Icey67/"><img src="/media/github-mark-white.svg" alt="Icey's Github" class="github-logo"></a>
+            </div>
+        </div>
+    </div>
+</nav>
+<!-- and that's the end of that -->
+<!-- crude implementation of leo's warning banner -->
+<div id="navbar-wip-banner" class="nav-banner-secondary nav-banner-hidden" role="alert" style="display:inherit;">
+    <div class="nav-container nav-elements nav-banner-secondary" style="color:white; font-size:large;">
+        <span>WARNING: This site is very much a WIP, do contact me if you notice anything weird.</span>
+        <span id="navbar-wip-dismiss" class="clickable">Dismiss X</span>
+    </div>
+</div>
+<!-- it no no wanna go away after clicking and reloading ;-; -->
+<!-- fafer -->
+<section>
+{{ content }}
+</section>
+<footer>
+    <div class="message-container">
+        loading
+    </div>
+</footer>
+</body>
+</html>

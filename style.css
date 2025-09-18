@@ -12,7 +12,8 @@ nav{
     display: block;
     top: 0;
     position: sticky;
-    border-bottom: 5px solid cyan;
+    border-bottom: 5px solid;
+    border-image: linear-gradient(90deg, #00ffff, #7100ff, #ffff00) 1;
     background-color: black;
     height: 85px;
 }
@@ -67,8 +68,10 @@ nav{
 section{
     position: inherit;
     margin: 1em auto 2em;
-    border: 5px solid cyan;
+    border: 5px solid;
+    border-image: linear-gradient(125deg, #00ffff, #7100ff, #ffff00) 1;
     width: 75%;
+    padding: 10px;
 }
 section:last-child {
     margin-bottom: 70px;
@@ -101,7 +104,8 @@ footer{
     width: 100%;
     color: white;
     background-color: black;
-    border-top: 5px solid cyan;
+    border-top: 5px solid;
+    border-image: linear-gradient(260deg, #00ffff, #7100ff, #ffff00) 1;
     height: auto;
     padding: 10px;
 }
@@ -177,7 +181,7 @@ button#bluesky:hover{
     color: white;
 }
 img#discord{
-    border: 5px solid cyan;
+    border: 5px solid #5865F2;
 }
 img#discord:hover{
     cursor: pointer;
@@ -195,6 +199,83 @@ button#general:hover{
     color: yellow;
     border: 2px solid #7100ff;
 }
+img#eveeebutton{
+    width: 40px;
+    margin-right: 2px;
+}
 p{
     margin-top: 10px;
+}
+img.blogimg{
+    display: block;
+    width: 600px;
+    margin: 5px auto;
+    cursor: zoom-in;
+    border: 5px solid cyan;
+}
+img.bloggif{
+    width: 300px;
+    display: inline-block;
+    margin: 5px;
+    vertical-align: middle;
+}
+code{
+    background-color: #002222;
+    color: #00ffff;
+    border-radius: 8px;
+    padding: 3px;
+}
+
+@media only screen and (max-width: 900px) {
+    section{
+        width: 92%;
+    }
+    nav{
+        height: auto;
+    }
+    .logo-image{
+        width: 150px;
+    }
+    .menu-item{
+        font-size: large;
+        margin-right: 10px;
+    }
+    .github-logo{
+        width: 40px;
+        padding-right: 5px;
+    }
+    h1{
+        font-size: 40px;
+    }
+    p{
+        font-size: 20px;
+    }
+    li{
+        font-size: 20px;
+    }
+    footer{
+        font-size: medium;
+        padding: 5px;
+    }
+    .message-container{
+        font-size: large;
+        margin-right: 5px;
+    }
+    button{
+        font-size: small;
+        margin: 5px;
+        padding: 5px;
+    }
+    img#eveeebutton{
+        width: 25px;
+        margin-right: 2px;
+    }
+    img#discord{
+        width: 320px;
+        border: 3px solid #5865F2;
+    }
+    img.blogimg{
+        width: 90%;
+        border: 3px solid cyan;
+    }
 }

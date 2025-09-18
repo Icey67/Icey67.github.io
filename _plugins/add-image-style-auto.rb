@@ -1,0 +1,31 @@
+# This Jekyll plugin automatically adds style attributes to image tags in markdown files
+[:documents, :pages].each do |hook|
+    Jekyll::Hooks.register hook, :post_render do |item|
+        # Check if the output is an HTML file
+        if item.output_ext == '.html'
+            site_source = item.site.source
+            content = item.output
+            # Find all <img> tags missing class and onclick attributes
+            content.gsub!(/<img(?![^>]*\bclass=)(?![^>]*\bonclick=)([^>]*)>/i) do |img_tag|
+                # Extract the src attribute
+                if img_tag =~ /src=["']([^"']+)["']/i
+                    img_src = $1
+                    # Check if the image is a gif
+                    if img_src.downcase.end_with?('.gif')
+                        # Add class and onclick
+                        new_img_tag = img_tag.sub(/<img/i, '<img class="bloggif" ')
+                        next new_img_tag
+                    end
+                    # Immediately add the class attribute
+                    new_img_tag = img_tag.sub(/<img/i, '<img class="blogimg" onclick="window.open(this.src)"')
+                    # That's it, return the modified tag
+                    new_img_tag
+                else
+                    img_tag # Return the original tag if no src found
+                end
+            end
+            # Update the item's output with the modified content
+            item.output = content
+        end
+    end
+end

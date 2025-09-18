@@ -2,7 +2,7 @@ var messages = [];
 
 // Load messages from the JSON file
 function loadMessages() {
-    return fetch('messages.json')
+    return fetch('/messages.json')
         .then(response => response.json())
         .then(data => {
             messages = data;
