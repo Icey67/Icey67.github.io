@@ -47,19 +47,17 @@ function updateFooterMessage(index) {
 }
 
 document.addEventListener('DOMContentLoaded', function() {
+    // Store what "tab" was opened from url
+    sessionStorage.setItem('lastTab', window.location.pathname);
+
     loadMessages().then(() => {
         updateFooterMessage(Math.floor(Math.random() * messages.length));
     });
 
-    // randomly load a function on a 6.7% chance
-    if (Math.random() < 0.067) {
+    // randomly load on a 0.67% chance
+    if (Math.random() < 0.067 && !window.location.pathname.includes('/blog')) {
         iceysixtysevenfeature();
-
-    } else {
-        // log the math result
-        console.log("didn't run the 6.7% feature, random number was " + (Math.random() * 100).toFixed(2));
     }
-
 });
 
 // more message stuff
@@ -90,6 +88,5 @@ function showMessages() { //useful debugging function: show all messages in the 
 
 function iceysixtysevenfeature() {
     // redirect to the 1067 event page
-    console.log("command ran")
     window.location.href = "/extras/old/index.html";
 }

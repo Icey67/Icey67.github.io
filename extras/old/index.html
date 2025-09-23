@@ -364,9 +364,6 @@
         tabButton.style.left = `${element.offsetLeft}px`;
         tabButton.style.width = `${element.offsetWidth}px`;
 
-        // Save the last opened tab to sessionStorage
-        sessionStorage.setItem('lastTab', sectionId);
-
         toggleTabMenu(); // Close the tab menu after clicking a tab
     }
 
@@ -401,25 +398,9 @@
 
     // auto start things
     document.addEventListener('DOMContentLoaded', function() {
-        console.warn("you nosy person, you");
-        console.warn("close the gawddamn console");
-        console.warn("unless you help making this site and need to debug");
-
-        // Open the last opened tab
-        var lastTab = sessionStorage.getItem('lastTab');
-        if (lastTab) {
-            // Find the corresponding tab element
-            var lastTabElement = document.querySelector(`.tab-bar a[onclick="showSection('${lastTab}', this)"]`);
-            if (lastTabElement) {
-                // Open the last tab
-                showSection(lastTab, lastTabElement);
-            }
-        } else {
-            // Open the first tab
-            console.warn('No last tab found, opening the default tab');
-            showSection('home', document.querySelector('.tab-bar a[onclick="showSection(\'home\', this)"]'));
-        }
-        toggleTabMenu(); // Close the tab menu by default
+        console.warn("IIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIII");
+        console.warn("666");
+        console.warn("s77777877777n");
 
         // Loads the messages then Updates the footer message
         loadMessages().then(() => {
@@ -427,9 +408,9 @@
         });
     });
 
-    // when reloading a second time return to icey67.github.io
+    // when reloading a second time return to normal
     if (performance.navigation.type === performance.navigation.TYPE_RELOAD) {
-        window.location.href = "/index.html";
+        window.location.href = sessionStorage.getItem('lastTab');
     }
 </script>
 <link rel="icon" type="image" href="/media/i67websiteicon.ico">
@@ -443,10 +424,52 @@
 <div class="tab-bar">
     <div class="tabbutton"></div>
     <a class="tab" href="#home" onclick="showSection('home', this)">ħøµ€?</a>
+    <a class="tab" href="#socials" onclick="showSection('socials', this)">ŝø¢ıæłŝ</a>
+    <a class="tab" href="#projects" onclick="showSection('projects', this)">þ¶ø̣̣̣̣̣̣̣j€¢Ŧſ</a>
+    <a class="tab" href="#specs" onclick="showSection('specs', this)">§ƥ€ƈş</a>
+    <a class="tab" href="#cool things" onclick="showSection('cool things', this)">¢øøł ŧĦĦĦ</a>
 </div>
 
 <div class="main" id="home">
     <h1>1067</h1>
+</div>
+<div class="main" id="socials" style="display:none;">
+    <h1>AAAAAAAAAAAAAAAAAAAAAAAAA</h1>
+    <p>https://lanyard.cnrad.dev/api/469059297033191425</p>
+</div>
+<div class="main" id="projects" style="display:none;">
+    <h1>ì̴̳̤̦͍͇̹̭͓͙̎͆̂͋͂́͆̓̚͠ṇ̵̛͍͍͇̼̦̖̥̦̠̱̱̍̿̂̈́͛̐͌̉͆̑͒̀͆̕s̴̛̛͖͍̦̜͕̝̥̿̓͋̌̎͆͒̏́ẗ̵̼̟̪̼̾ͅr̵̳̰͚̬̝̼̹̄̉̽u̶̡͉͖̝̩̭͈̳̮̞̠̟͍͖͗͑̀͗͛̍̊͜c̵̨̞̺̰̩̱̼̮̳͗̉̏͂̀͋̋̄t̵̨̹͇̗̤̣͔̖̟͖͔̲͎̓̅̽͌̿̀͊̈́͗̇̈́ͅͅí̶̤̪ő̵̢̫n̴̨̨̨̨̫̪͎̖͈̩̙̫̻̉̓͌̃̏̆̀͘s̵̨̛̛͖̝̬̥̘̼͔͈̫̼̞̫̖̱͗͋̄̇́</h1>
+    <p>
+        <br>
+    </p>
+    <p>
+        <br>
+    </p>
+    <p>
+        <br>
+    </p>
+    <p>
+        <br>
+    </p>
+    <p>
+        <br>
+    </p>
+    <p>
+        <br>
+    </p>
+    <p>
+        <br>
+    </p>
+    <p>oþen tħħħħħħħ<br>th€€€€€-e-e-e-e--e-e-</p>
+    <h1>laptop</h1>
+    <p>and ħŋ↓→€ŧ¶ħ↓ŋ→“đ¶€ðħ”ŋ„↓€ðſħđ”ŋ→„€ðħ¶”đ↓ŋ→€¶ħ”“↓→ŋđ”€↓¶→↑Ħ‘’§ı↑€ŊĦı↓→ħŋ”“↓→þſ¶ħ”ŋ↓¶→þſ€ſħ”</p>
+</div>
+<div class="main" id="specs" style="display:none;">
+    <h1>t̷̢̟̭̣̤̃̋͠ḩ̵̺̩̜̩̽̑͋̈̆͛̃͗̂̇͋̐̓̉̚̕ͅȅ̴̡̻̼̝̝͇̺̭͍̻̼̯̜̼͔͎̹͈͙͕̙̱̫͙̘̮̺̝͉̥̹̣̤̠̂̄̀͗́̅̽̓̂͂͛̐̄̂̽̐̉̈́̈́͋̋̌̈́̋̄͂̃͂̀̓͌́̇̓͘͘̕̚̚͜͠͠ ̸͓̱͙̠͖͔̪̫͓̼̬̣̦̯̳̯̳͉͌̾̕l̸̘̤͊͒̋̽̄̈́̽̃̋̈̋͌́̈͒̅͗͋̆͗͆̏́͆̅͊͂̏͒͐̐̈́͘̚̕͘͝͝͠a̴̪̟̿͑͊͒͐̆̽͑̈͗̐͒̒̈̾͒̀͊̀͒̾͛̍̿͛̈́̑͋̐̐̊͑̓͑͌̀̈́̋̈́̕͝͠ͅp̶̡̢̧̡̢̢͔̫̠͙͙͕̘̮̳͎̯͓̬̻͓̪͍͎̟͎̙̪̺̼̙͕̤̮̩͙͉̘̦̯̣͆̓̈́̌̓̽̈͂͛̓̈́̄̀̿̉̔̎̒̊̔̀̌̏͑̚͘͜t̸̨̡̛͍̙̖͓̩̠̮̻̭̤̬̪̰̜̗̱̃̑̌͌̈́̈́̀͗̌̈́̀́́̿́̈́̒̀͛̊̌͆̈́̀͗̂̂̆̀͜͜͝͝ò̶̧̳̩̖̼͖͍͉̺̘͖̠̄̒̄̃̾͂͑̀̇̾̃̈͊̾̄̾̋͆̑̒̌̃̀̉̇̉̐̏̂̐̅̑͛̾͆̃̊̾̌͘͘͘̚͝͠͠͝p̶̧̢̢̧̧̼͍̰͉̤͉̦̩͉̩̗̤͈̼̰͍͈̪̘̤͇̺̩̬̳͖̫̥͇̙̤͓͕͈̤̫̼̖̜͑̎̆̓̾̊̓̉͊́̇͆͌̑̐͆̒̃͑́̑̈́͐̋̚͘̚̕ͅ</h1>
+</div>
+<div class="main" id="cool things" style="display:none;">
+    <h1>c</h1>
+    <p>incoming call</p>
 </div>
 <footer class="disclaimer" id="footer">
     <div class="message-container">is anyone there?</div>

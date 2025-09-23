@@ -120,6 +120,7 @@ footer{
 li{
     font-size: 30px;
     color: cyan;
+    list-style-position: inside;
 }
 .buttonsContainer{
     display: flex;
@@ -219,24 +220,56 @@ img.bloggif{
     margin: 5px;
     vertical-align: middle;
 }
-pre{
+pre {
     background-color: #002222;
     color: #00ffff;
     padding: 10px;
     text-align: left;
-}
-pre::marker{
-    color: cyan;
-    font-weight: bold;
-    font-size: 20px;
-    padding-right: 5px;
-    text-align: left;
+    list-style: outside;
+    overflow: auto;
+    max-height: 200px;
 }
 code{
     background-color: #002222;
     color: #00ffff;
     border-radius: 8px;
     padding: 3px;
+}
+table{
+    margin: 0 auto;
+    border: 5px solid cyan;
+}
+th{
+    border-bottom: 3px solid #7100ff;
+    padding: 5px;
+    border-right: 3px solid yellow;
+    font-size: 30px;
+}
+th:last-child{
+    border-right: none;
+    padding: 5px;
+}
+td{
+    border-right: 3px solid yellow;
+    border-bottom: 3px solid #7100ff;
+    padding: 5px;
+    font-size: 25px;
+}
+td:last-child{
+    border-right: none;
+    padding: 5px;
+}
+tr:last-child td{
+    border-bottom: none;
+}
+blockquote{
+    border-left: 5px solid;
+    border-image: linear-gradient(180deg, #00ffff, #7100ff, #ffff00) 1;
+    margin: 10px auto;
+    padding-left: 10px;
+    text-align: left;
+    max-width: 800px;
+    overflow-x: auto;
 }
 
 @media only screen and (max-width: 900px) {
@@ -290,5 +323,16 @@ code{
     img.blogimg{
         width: 90%;
         border: 3px solid cyan;
+    }
+    th{
+        font-size: 20px;
+        padding: 3px;
+    }
+    td{
+        font-size: 15px;
+        padding: 3px;
+    }
+    blockquote{
+        max-width: 400px;
     }
 }
