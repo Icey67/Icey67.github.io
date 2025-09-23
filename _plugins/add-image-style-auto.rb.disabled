@@ -13,7 +13,7 @@
                     # Check if the image is a gif
                     if img_src.downcase.end_with?('.gif')
                         # Add class and onclick
-                        new_img_tag = img_tag.sub(/<img/i, '<img class="bloggif" ')
+                        new_img_tag = img_tag.sub(/<img/i, '<img class="bloggif"')
                         next new_img_tag
                     end
                     # Immediately add the class attribute

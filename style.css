@@ -219,6 +219,19 @@ img.bloggif{
     margin: 5px;
     vertical-align: middle;
 }
+pre{
+    background-color: #002222;
+    color: #00ffff;
+    padding: 10px;
+    text-align: left;
+}
+pre::marker{
+    color: cyan;
+    font-weight: bold;
+    font-size: 20px;
+    padding-right: 5px;
+    text-align: left;
+}
 code{
     background-color: #002222;
     color: #00ffff;

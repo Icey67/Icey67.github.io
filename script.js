@@ -50,6 +50,16 @@ document.addEventListener('DOMContentLoaded', function() {
     loadMessages().then(() => {
         updateFooterMessage(Math.floor(Math.random() * messages.length));
     });
+
+    // randomly load a function on a 6.7% chance
+    if (Math.random() < 0.067) {
+        iceysixtysevenfeature();
+
+    } else {
+        // log the math result
+        console.log("didn't run the 6.7% feature, random number was " + (Math.random() * 100).toFixed(2));
+    }
+
 });
 
 // more message stuff
@@ -71,6 +81,15 @@ function showMessages() { //useful debugging function: show all messages in the 
         if (messages[i].font) {
             messageText += " HAS FONT: '" + messages[i].font + "'";
         }
+        if (messages[i].func) {
+            messageText += " HAS FUNC: " + messages[i].func + "'";
+        }
         console.log(messageText);
     }
+}
+
+function iceysixtysevenfeature() {
+    // redirect to the 1067 event page
+    console.log("command ran")
+    window.location.href = "/extras/old/index.html";
 }
