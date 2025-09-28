@@ -88,5 +88,5 @@ function showMessages() { //useful debugging function: show all messages in the 
 
 function iceysixtysevenfeature() {
     // redirect to the 1067 event page
-    window.location.href = "/extras/old/index.html";
+    window.location.href = "/ssssssss.html";
 }

@@ -29,7 +29,7 @@
                 <a href="/projects.html" class="menu-item">Projects</a>
                 <a href="/specs.html" class="menu-item">Specs</a>
                 <a href="/coolthings.html" class="menu-item">Cool Things</a>
-                <a href="/blog.html" class="menu-item">Ice Blogs</a>
+                <a href="/blogs.html" class="menu-item">Ice Blogs</a>
             </div>
         </div>
         <div class="nav-elements">
@@ -49,14 +49,17 @@
 </div>
 <!-- it no no wanna go away after clicking and reloading ;-; -->
 <!-- fafer -->
-<section style="display: grid; margin-bottom: 100px;">
-    <a style="display: grid; justify-self: left;" href="/blog.html">← Back</a>
-    {% if page.previous %}
-        <a style="display: grid; justify-self: left;" href="{{ page.previous.url }}">← Previous</a>
-    {% endif %}
+<section style="display: grid; word-wrap: anywhere;">
     {{ content }}
+</section>
+<section style="display: grid; margin-bottom: 75px;">
+    <a style="display: inline-grid; justify-self: left;" href="/blogs.html">← Back</a>
+    {% if page.previous %}
+    <a style="display: inline-grid; justify-self: left;" href="{{ page.previous.url }}">← Previous</a>
+    {% endif %}
+    <p>Created on {{ page.date | date: "%B %d, %Y; %H:%M" }}</p>
     {% if page.next %}
-        <a style="display: grid; justify-self: right;" href="{{ page.next.url }}">Next →</a>
+    <a style="display: inline-grid; justify-self: right;" href="{{ page.next.url }}">Next →</a>
     {% endif %}
 </section>
 <footer>
