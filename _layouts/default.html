@@ -3,14 +3,14 @@
 <head>
     <title>Icey's Website</title>
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Odibee+Sans&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@300..700&display=swap" rel="stylesheet">
     <link rel="icon" type="image" href="/media/i67websiteicon.ico">
-    <script src="../navbar.js" type="module"></script>
-    <script src="../script.js"></script>
+    <script src="/navbar.js" type="module"></script>
+    <script src="/script.js"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 <body>
@@ -19,17 +19,17 @@
     <div class="nav-container">
         <div class="nav-elements">
             <div class="logo">
-                <a href="../index.html"><img src="/media/IceyBanner.png" alt="Icey's Logo" class="logo-image"></a>
+                <a href="/index.html"><img src="/media/IceyBanner.png" alt="Icey's Logo" class="logo-image"></a>
             </div>
         </div>
         <div class="nav-elements">
             <div class="menu">
-                <a href="../index.html" class="menu-item">Home</a>
-                <a href="../socials.html" class="menu-item">Socials</a>
-                <a href="../projects.html" class="menu-item">Projects</a>
-                <a href="../specs.html" class="menu-item">Specs</a>
-                <a href="../coolthings.html" class="menu-item">Cool Things</a>
-                <a href="../blogs.html" class="menu-item">Ice Blogs</a>
+                <a href="/index.html" class="menu-item">Home</a>
+                <a href="/socials.html" class="menu-item">Socials</a>
+                <a href="/projects.html" class="menu-item">Projects</a>
+                <a href="/specs.html" class="menu-item">Specs</a>
+                <a href="/coolthings.html" class="menu-item">Cool Things</a>
+                <a href="/blogs.html" class="menu-item">Ice Blogs</a>
             </div>
         </div>
         <div class="nav-elements">
@@ -43,15 +43,16 @@
 <!-- crude implementation of leo's warning banner -->
 <div id="navbar-wip-banner" class="nav-banner-secondary nav-banner-hidden" role="alert" style="display:inherit;">
     <div class="nav-container nav-elements nav-banner-secondary" style="color:white; font-size:large;">
-        <span>WARNING: This site is very much a WIP, do contact me if you notice anything weird.</span>
+        <a href="https://github.com/icey67/icey67.github.io/issues">WARNING: This site is very much a WIP, report it to the website's repository issue page if you notice anything weird.</a>
         <span id="navbar-wip-dismiss" class="clickable">Dismiss X</span>
     </div>
 </div>
-<!-- it no no wanna go away after clicking and reloading ;-; -->
 <!-- fafer -->
-<section>
-{{ content }}
-</section>
+<div class="content">
+    <section>
+        {{ content }}
+    </section>
+</div>
 <footer>
     <div class="message-container">
         loading

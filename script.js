@@ -90,3 +90,23 @@ function iceysixtysevenfeature() {
     // redirect to the 1067 event page
     window.location.href = "/ssssssss.html";
 }
+
+// Firefox detection and banner logic
+document.addEventListener('DOMContentLoaded', function () {
+    const alert = document.getElementById('firefox-warning-banner');
+    const dismissAlertButton = document.getElementById('firefox-warning-dismiss');
+    dismissAlertButton.style="cursor: pointer;";
+    dismissAlertButton.style="text-decoration: underline solid white;";
+    if (localStorage.getItem('firefoxBannerDismissed') === '1') {
+        alert.style.display = 'none';
+    } else {
+        alert.style.display = 'inherit';
+    }
+    if (dismissAlertButton) {
+        dismissAlertButton.addEventListener('click', event => {
+            event.preventDefault()
+            alert.style.display = 'none';
+            localStorage.setItem('firefoxBannerDismissed', '1');
+        });
+    }
+});

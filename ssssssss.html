@@ -27,34 +27,6 @@
         color: white;
     }
 
-    body::after {
-        content: "";
-        position: absolute;
-        inset: 0;
-        background-image:
-                repeating-linear-gradient(0deg,
-                rgba(255,255,255,0.08) 0px,
-                rgba(255,255,255,0.08) 1px,
-                transparent 1px,
-                transparent 2px),
-                repeating-linear-gradient(90deg,
-                rgba(255,255,255,0.08) 0px,
-                rgba(255,255,255,0.08) 1px,
-                transparent 1px,
-                transparent 2px);
-        mix-blend-mode: screen;
-        animation: noiseShift 0.2s steps(2) infinite;
-        pointer-events: none;
-    }
-
-    @keyframes noiseShift {
-        0%   { transform: translate(0,0); }
-        25%  { transform: translate(-5%, 0); }
-        50%  { transform: translate(10%, 0); }
-        75%  { transform: translate(5%, 0); }
-        100% { transform: translate(0,0); }
-    }
-
     h1, h2, h3, h4, table, th, tr {
         font-weight: normal;
     }
@@ -286,6 +258,9 @@
     }
 
     @media screen and (max-width: 1215px) {
+        #logo {
+            width: 150px;
+        }
         .tab-bar {
             display: none;
             background-color: rgba(0, 0, 0);
@@ -459,7 +434,7 @@
     <a class="tab" href="#cool things" onclick="showSection('cool things', this)">¢øøł ŧĦĦĦ</a>
 </div>
 <audio autoplay loop>
-    <source src="/media/lullaby%20-%20vivivivivi.mp3" type="audio/mpeg">
+    <source src="/media/lullaby - vivivivivi.mp3" type="audio/mpeg">
 </audio>
 <div class="main" id="home">
     <h1>1067</h1>

@@ -16,6 +16,7 @@ nav{
     border-image: linear-gradient(90deg, #00ffff, #7100ff, #ffff00) 1;
     background-color: black;
     height: 85px;
+    z-index: 100;
 }
 .nav-container{
     display: flex;
@@ -108,6 +109,7 @@ footer{
     border-image: linear-gradient(260deg, #00ffff, #7100ff, #ffff00) 1;
     height: auto;
     padding: 10px;
+    gap: 5em;
 }
 .message-container{
     display: flex;
@@ -271,68 +273,130 @@ blockquote{
     max-width: 800px;
     overflow-x: auto;
 }
-
+.music-tip{
+    font-size: x-large;
+    max-height: 60px;
+    overflow-y: auto;
+}
+.music-section{
+    font-size: 30px;
+    margin: 5px;
+}
+.music-section::before {
+    content: "";
+    position: absolute;
+    height: 5px;
+    width: 300px;
+    margin-left: -305px;
+    margin-top: 15px;
+    background: linear-gradient(-90deg, #00ffff, #7100ff, #ffff00);
+}
+.music-section::after {
+    content: "";
+    position: absolute;
+    height: 5px;
+    width: 300px;
+    margin-left: 5px;
+    margin-top: 15px;
+    background: linear-gradient(90deg, #00ffff, #7100ff, #ffff00);
+}
 @media only screen and (max-width: 900px) {
-    section{
+    section {
         width: 92%;
     }
-    nav{
+
+    nav {
         height: auto;
     }
-    .logo-image{
+
+    .logo-image {
         width: 150px;
     }
-    .menu-item{
+
+    .menu-item {
         font-size: large;
         margin-right: 10px;
     }
-    .github-logo{
+
+    .github-logo {
         width: 40px;
         padding-right: 5px;
     }
-    h1{
+
+    h1 {
         font-size: 40px;
     }
-    p{
+
+    p {
         font-size: 20px;
     }
-    li{
+
+    li {
         font-size: 20px;
     }
-    footer{
+
+    footer {
         font-size: medium;
         padding: 5px;
+        gap: 7px;
     }
-    .message-container{
+
+    .music-tip {
+        font-size: medium;
+    }
+
+    .message-container {
         font-size: large;
         margin-right: 5px;
     }
-    button{
+
+    button {
         font-size: small;
         margin: 5px;
         padding: 5px;
     }
-    img#eveeebutton{
+
+    img#eveeebutton {
         width: 25px;
         margin-right: 2px;
     }
-    img#discord{
+
+    img#discord {
         width: 320px;
         border: 3px solid #5865F2;
     }
-    img.blogimg{
+
+    img.blogimg {
         width: 90%;
         border: 3px solid cyan;
     }
-    th{
+
+    img.bloggif {
+        width: 150px;
+        margin: 3px;
+    }
+
+    th {
         font-size: 20px;
         padding: 3px;
     }
-    td{
+
+    td {
         font-size: 15px;
         padding: 3px;
     }
-    blockquote{
+
+    blockquote {
         max-width: 400px;
+    }
+
+    .music-section::before {
+        width: 150px;
+        margin-left: -155px;
+    }
+
+    .music-section::after {
+        width: 150px;
+        margin-left: 5px;
     }
 }
