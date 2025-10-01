@@ -46,7 +46,7 @@
         };
         const volLabel = document.createElement('span');
         volLabel.textContent = userVolume + '%';
-        volLabel.style = 'margin-left: 8px; margin-right: 10px;';
+        volLabel.style = 'margin-left: 8px; margin-right: 20px; width: 15px;';
         musicFooter.appendChild(document.createTextNode('🔈'))
         musicFooter.appendChild(volInput);
         musicFooter.appendChild(volLabel);
@@ -114,7 +114,7 @@
         for (const section of sections) {
             const rect = section.getBoundingClientRect();
             const absTop = rect.top + scrollY;
-            if (absTop < scrollY + vh / 1.25) {
+            if (absTop < scrollY + vh / 1.4) {
                 active = section;
             }
         }
@@ -136,6 +136,10 @@
             renderFooter('');
             currentSection = null;
             currentYtId = null;
+            return;
+        } else if (section.getAttribute('data-mute') === "false") {
+            fadeIn();
+            renderFooter(tip);
             return;
         }
         if (section === currentSection) return;

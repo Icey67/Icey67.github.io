@@ -93,6 +93,10 @@ h1{
     font-weight: normal;
     font-size: 50px;
 }
+h2{
+    font-weight: normal;
+    font-size: 40px;
+}
 p{
     font-size: 30px;
 }
@@ -236,6 +240,7 @@ code{
     color: #00ffff;
     border-radius: 8px;
     padding: 3px;
+    font-size: x-large;
 }
 table{
     margin: 0 auto;
@@ -384,6 +389,10 @@ blockquote{
     td {
         font-size: 15px;
         padding: 3px;
+    }
+
+    code {
+        font-size: 15px;
     }
 
     blockquote {
