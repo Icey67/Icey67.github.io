@@ -30,12 +30,14 @@ function updateFooterMessage(index) {
     if (randomMessage.url) {
         var link = document.createElement('a');
         link.href = randomMessage.url;
-        link.textContent = randomMessage.text;
-        link.style.color = "white"; // Change the color if needed
+        link.innerHTML = randomMessage.text; 
+        
+        link.style.color = "white";
         messageContainer.appendChild(link);
     } else {
-        messageContainer.appendChild(document.createTextNode(randomMessage.text));
+        messageContainer.innerHTML = randomMessage.text;
     }
+    
     if (randomMessage.font) {
         messageContainer.style.fontFamily = randomMessage.font;
         if (randomMessage.font === "Fira Code") {
@@ -43,9 +45,7 @@ function updateFooterMessage(index) {
         }
     }
     console.log("message updated to: " + index);
-// Example usage: updateFooterMessage(0); // This will update the footer with the first message
 }
-
 document.addEventListener('DOMContentLoaded', function() {
     loadMessages().then(() => {
         updateFooterMessage(Math.floor(Math.random() * messages.length));
