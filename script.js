@@ -23,18 +23,16 @@ function updateFooterMessage(index) {
         return;
     }
 
-    var randomMessage = messages[index];
-    var messageContainer = document.querySelector('.message-container');
+    const randomMessage = messages[index];
+    let messageContainer = document.querySelector('.message-container');
     messageContainer.innerHTML = '';
-
     if (randomMessage.url) {
-        var link = document.createElement('a');
+        const link = document.createElement('a');
         link.href = randomMessage.url;
-        link.textContent = randomMessage.text;
-        link.style.color = "white"; // Change the color if needed
+        link.innerHTML = randomMessage.text;
         messageContainer.appendChild(link);
     } else {
-        messageContainer.appendChild(document.createTextNode(randomMessage.text));
+        messageContainer.innerHTML = randomMessage.text;
     }
     if (randomMessage.font) {
         messageContainer.style.fontFamily = randomMessage.font;
@@ -43,7 +41,7 @@ function updateFooterMessage(index) {
         }
     }
     console.log("message updated to: " + index);
-// Example usage: updateFooterMessage(0); // This will update the footer with the first message
+    // Example usage: updateFooterMessage(0); // This will update the footer with the first message
 }
 
 document.addEventListener('DOMContentLoaded', function() {
@@ -79,9 +77,6 @@ function showMessages() { //useful debugging function: show all messages in the 
         if (messages[i].font) {
             messageText += " HAS FONT: '" + messages[i].font + "'";
         }
-        if (messages[i].func) {
-            messageText += " HAS FUNC: " + messages[i].func + "'";
-        }
         console.log(messageText);
     }
 }
@@ -110,3 +105,25 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     }
 });
+
+function youtubemusictest() {
+    //check for iframe with yt-music-player id
+    var iframe = document.getElementById('yt-music-player');
+    //add style to iframe if it exists
+    if (iframe && iframe.getAttribute('shown') !== '1') {
+        iframe.style.display = 'block';
+        iframe.style.position = 'fixed';
+        iframe.style.top = '350px';
+        iframe.style.left = '0';
+        iframe.style.width = '300px';
+        iframe.style.height = '300px';
+        iframe.setAttribute('shown', '1');
+        console.log("YouTube Music iframe detected and styled.");
+    } else if (iframe.getAttribute('shown') === '1') {
+        iframe.style.display = 'none';
+        iframe.removeAttribute('shown');
+        console.log("YouTube Music iframe hidden.");
+    } else {
+        console.log("No YouTube Music iframe detected.");
+    }
+}
