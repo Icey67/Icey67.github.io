@@ -30,6 +30,7 @@ function updateFooterMessage(index) {
         const link = document.createElement('a');
         link.href = randomMessage.url;
         link.innerHTML = randomMessage.text;
+        link.style.color = 'white';
         messageContainer.appendChild(link);
     } else {
         messageContainer.innerHTML = randomMessage.text;
