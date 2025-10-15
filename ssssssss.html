@@ -1,0 +1,484 @@
+<!DOCTYPE html>
+<title>IC67</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Odibee+Sans&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@300..700&display=swap" rel="stylesheet">
+<meta name="viewport" content="width=device-width,initial-scale=1"/>
+<style>
+    body {
+        background-image: url("/media/I67Background.png");
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-attachment: fixed;
+        background-position: center;
+        overflow-y: auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+        /* greyscale filter */
+        backdrop-filter: grayscale(100%);
+    }
+
+    body {
+        font-family: "Odibee Sans";
+        color: white;
+    }
+
+    h1, h2, h3, h4, table, th, tr {
+        font-weight: normal;
+    }
+
+    h1 {
+        font-size: 60px;
+    }
+
+    h2 {
+        font-size: 40px;
+    }
+
+    h3 {
+        font-size: 30px;
+    }
+
+    .tab {
+        font-size: 20px;
+        cursor: pointer;
+    }
+
+    p, table {
+        font-size: 25px;
+    }
+
+    .topbar {
+        display: block;
+        background-color: rgba(0, 0, 0, 0.5);
+        position: fixed;
+        left: 0;
+        right: 0;
+        top: 0;
+        height: 89px;
+    }
+
+    #logo {
+        z-index: 1;
+        position: fixed;
+        display: flex;
+        top: 0;
+        left: 0;
+        width: 225px;
+    }
+
+    #github {
+        z-index: 1;
+        position: fixed;
+        top: 20px;
+        right: 10px;
+        width: 40px;
+        cursor: pointer;
+    }
+
+    .tab-bar {
+        z-index: 2;
+        display: flex;
+        padding: 10px 50px;
+        background-color: rgba(0, 0, 0, 0.5);
+        position: fixed;
+        top: 10px;
+        left: 50%;
+        transform: translateX(-50%);
+        clip-path: polygon(10% 0%, 90% 0%, 100% 50%, 90% 100%, 10% 100%, 0% 50%);
+    }
+
+    .tab-bar a {
+        z-index: 1;
+        color: white;
+        text-decoration: none;
+        padding: 10px 20px;
+        margin: 0 30px;
+    }
+
+    .tab-bar a.active {
+        color: black;
+        transition: color 0.2s ease;
+    }
+
+    .tabbutton {
+        z-index: 1;
+        position: absolute;
+        height: 40px;
+        background-color: cyan;
+        transition: left 0.2s ease, width 0.2s ease;
+        clip-path: polygon(10% 0%, 90% 0%, 100% 50%, 90% 100%, 10% 100%, 0% 50%);
+    }
+
+    .main {
+        z-index: 0;
+        padding: 20px;
+        background-color: rgba(0, 0, 0, 0.5);
+        border-radius: 25px;
+        backdrop-filter: blur(100px);
+        text-align: center;
+        box-sizing: border-box;
+        width: 75%;
+        max-height: calc(100vh - 200px); /* Adjust height to fit within viewport */
+        overflow-y: auto; /* Enable vertical scrolling */
+    }
+
+    button {
+        display: inline-block;
+        margin: 10px;
+        margin-bottom: 30px;
+        padding: 10px 20px;
+        clip-path: polygon(20% 0%, 80% 0%, 100% 50%, 80% 100%, 20% 100%, 0% 50%);
+        text-align: center;
+        box-sizing: border-box;
+        transition: background-color 0.2s ease, color 0.2s ease;
+        font-family: 'Odibee Sans';
+        font-size: 25px;
+        cursor: pointer;
+    }
+
+    #yt {
+        color: red;
+        background-color: rgba(255,0,0,0.5);
+        border: 2px solid red;
+    }
+
+    #yt:hover {
+        background-color: rgba(255,0,0,0.75);
+        color: white;
+    }
+
+    #birb {
+        color: #249ef0;
+        background-color: rgba(36,158,240,0.5);
+        border: 2px solid #249ef0;
+    }
+
+    #birb:hover {
+        background-color: rgba(36,158,240,0.75);
+        color: white;
+    }
+
+    #stream {
+        color: #6116EA;
+        background-color: rgba(97,22,234,0.5);
+        border: 2px solid #6116EA;
+    }
+
+    #stream:hover {
+        background-color: rgba(97,22,234,0.75);
+        color: white;
+    }
+
+    .center-image {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 400px;
+        cursor: pointer;
+    }
+
+    #projectbutton {
+        display: inline-block;
+        width: 200px;
+        cursor: pointer;
+        background-color: rgba(0, 0, 0, 0.5);
+        border: none;
+        color: white;
+        margin: 0;
+    }
+
+    #projectbutton:hover {
+        background-color: rgba(0, 0, 0, 0.75);
+    }
+
+    .projectdesc {
+        display: block;
+        padding: 20px;
+        background-color: rgba(0, 0, 0, 0.5);
+        text-align: center;
+        box-sizing: border-box;
+        width: 500px;
+        clip-path: polygon(20% 0%, 80% 0%, 100% 50%, 80% 100%, 20% 100%, 0% 50%);
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 0;
+        margin-bottom: 25px;
+    }
+
+    .disclaimer {
+        display: flex;
+        background-color: rgba(0,0,0,0.3);
+        position: absolute;
+        bottom: 0px;
+        left: 0;
+        right: 0;
+        width: auto;
+        padding: 10px;
+        height: auto;
+        align-items: center;
+        justify-content: center;
+        z-index: 1;
+        position: fixed;
+    }
+
+    .message-container {
+        display: flex;
+        flex-direction: row;
+        color: white;
+        font-family: 'Odibee Sans', monospace;
+        bottom: 0px;
+        font-size: 30px;
+        text-align: center;
+        overflow-y: auto;
+        max-height: 50px;
+    }
+
+    /* Style the scrollbar track */
+    ::-webkit-scrollbar {
+        width: 7px; /* Width of the scrollbar */
+    }
+
+    /* Style the scrollbar thumb */
+    ::-webkit-scrollbar-thumb {
+        background-color: #00ffff; /* Color of the scrollbar thumb */
+    }
+
+    /* Style the scrollbar track */
+    ::-webkit-scrollbar-track {
+        background-color: #000000; /* Color of the scrollbar track */
+    }
+
+    .hamburger {
+        display: none;
+    }
+
+    @media screen and (max-width: 1215px) {
+        #logo {
+            width: 150px;
+        }
+        .tab-bar {
+            display: none;
+            background-color: rgba(0, 0, 0);
+            position: fixed;
+            top: 60px;
+            width: 100px;
+            clip-path: unset;
+            border-radius: 10px;
+            justify-content: center;
+            flex-direction: column;
+        }
+
+        .tab-bar.active {
+            display: flex;
+        }
+
+        .tab-bar a {
+            padding: unset;
+            margin: 10px;
+            position: relative;
+        }
+
+        .tab-bar a.active {
+            background-color: #00ffff;
+        }
+
+        .tabbutton {
+            display: none;
+        }
+
+        .hamburger {
+            display: block;
+            z-index: 2;
+            position: fixed;
+            top: 20px;
+            left: 49%;
+            cursor: pointer;
+            font-size: 30px;
+        }
+    }
+</style>
+<script>
+    var messages = [
+        {text: "Is anyone out there?"}
+    ];
+
+    // Define the function to update the footer message
+    function updateFooterMessage(index) {
+        if (index === 'last') {
+            index = messages.length - 1;
+        }
+        if (typeof index !== 'number') {
+            console.error("Invalid input. Please provide a number as the index.");
+            return;
+        }
+        if (index < 0 || index >= messages.length) {
+            console.error("Invalid index. Please provide a valid index between 0 and " + (messages.length - 1));
+            return;
+        }
+
+        var randomMessage = messages[index];
+        var messageContainer = document.querySelector('.message-container');
+        messageContainer.innerHTML = '';
+
+        if (randomMessage.url) {
+            var link = document.createElement('a');
+            link.href = randomMessage.url;
+            link.textContent = randomMessage.text;
+            link.style.color = "white"; // Change the color if needed
+            link.target = "_blank"; //makes link open in new tab hopefully
+            messageContainer.appendChild(link);
+        } else {
+            messageContainer.appendChild(document.createTextNode(randomMessage.text));
+        }
+        if (randomMessage.font) {
+            messageContainer.style.fontFamily = randomMessage.font;
+            if (randomMessage.font === "Fira Code") {
+                messageContainer.style.fontSize = "26px";
+            }
+        }
+        console.log("message updated to: " + index);
+    // Example usage: updateFooterMessage(0); // This will update the footer with the first message
+    }
+
+    // tab stuff
+    function showSection(sectionId, element) {
+        // Hide all sections
+        document.querySelectorAll('.main').forEach(section => {
+            section.style.display = 'none';
+        });
+
+        // Show the selected section
+        document.getElementById(sectionId).style.display = 'block';
+
+        // Remove active class from all tabs
+        document.querySelectorAll('.tab-bar a').forEach(tab => {
+            tab.classList.remove('active');
+        });
+
+        // Add active class to the clicked tab
+        element.classList.add('active');
+
+        // Move the tabbutton to the clicked tab
+        const tabButton = document.querySelector('.tabbutton');
+        tabButton.style.left = `${element.offsetLeft}px`;
+        tabButton.style.width = `${element.offsetWidth}px`;
+
+        toggleTabMenu(); // Close the tab menu after clicking a tab
+    }
+
+    function toggleTabMenu() {
+        var tabMenu = document.querySelector('.tab-bar');
+        tabMenu.classList.toggle('active');
+    }
+
+    // more message stuff
+    function messagesindex() { //useful debugging function: check how many messages there are
+        console.log("the messages array has " + (messages.length - 1) + " items");
+
+        // Count and log the number of messages with a link
+        var messagesWithLink = messages.filter(message => message.url).length;
+        console.log("the messages array has " + messagesWithLink + " items with a link");
+    }
+
+    function showMessages() { //useful debugging function: show all messages in the console
+        console.log("here are the messages: ");
+        for (var i = 0; i < messages.length; i++) {
+            var messageText = i + ": '" + messages[i].text + "'";
+            if (messages[i].url) {
+                messageText += " HAS LINK: " + messages[i].url;
+            }
+            if (messages[i].font) {
+                messageText += " HAS FONT: '" + messages[i].font + "'";
+            }
+            console.log(messageText);
+        }
+    }
+
+
+    // auto start things
+    document.addEventListener('DOMContentLoaded', function() {
+        console.warn("IIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIII");
+        console.warn("666");
+        console.warn("s77777877777n");
+
+        // Loads the messages then Updates the footer message
+        loadMessages().then(() => {
+            updateFooterMessage(Math.floor(Math.random() * messages.length));
+        });
+    });
+
+    // when reloading a second time return to normal
+    if (performance.navigation.type === performance.navigation.TYPE_RELOAD) {
+        window.location.href = sessionStorage.getItem('lastTab');
+    }
+</script>
+<link rel="icon" type="image" href="/media/i67websiteicon.ico">
+
+<body>
+<div class="topbar">
+    <img id="logo" src="/media/IC67Banner.png" title="IC67" onclick="window.open('https://github.com/icey67/i67ossecret')" style="cursor: pointer;">
+    <img id="github" src="/media/github-mark-white.svg" title="My Github" onclick="document.getElementById('github').style['display'] = 'none';">
+</div>
+<div class="hamburger" onclick="toggleTabMenu()">☰</div>
+<div class="tab-bar">
+    <div class="tabbutton"></div>
+    <a class="tab" href="#home" onclick="showSection('home', this)">ħøµ€?</a>
+    <a class="tab" href="#socials" onclick="showSection('socials', this)">ŝø¢ıæłŝ</a>
+    <a class="tab" href="#projects" onclick="showSection('projects', this)">þ¶ø̣̣̣̣̣̣̣j€¢Ŧſ</a>
+    <a class="tab" href="#specs" onclick="showSection('specs', this)">§ƥ€ƈş</a>
+    <a class="tab" href="#cool things" onclick="showSection('cool things', this)">¢øøł ŧĦĦĦ</a>
+</div>
+<audio autoplay loop>
+    <source src="/media/lullaby - vivivivivi.mp3" type="audio/mpeg">
+</audio>
+<div class="main" id="home">
+    <h1>1067</h1>
+</div>
+<div class="main" id="socials" style="display:none;">
+    <h1>AAAAAAAAAAAAAAAAAAAAAAAAA</h1>
+    <p>https://lanyard.cnrad.dev/api/469059297033191425</p>
+</div>
+<div class="main" id="projects" style="display:none;">
+    <h1>ì̴̳̤̦͍͇̹̭͓͙̎͆̂͋͂́͆̓̚͠ṇ̵̛͍͍͇̼̦̖̥̦̠̱̱̍̿̂̈́͛̐͌̉͆̑͒̀͆̕s̴̛̛͖͍̦̜͕̝̥̿̓͋̌̎͆͒̏́ẗ̵̼̟̪̼̾ͅr̵̳̰͚̬̝̼̹̄̉̽u̶̡͉͖̝̩̭͈̳̮̞̠̟͍͖͗͑̀͗͛̍̊͜c̵̨̞̺̰̩̱̼̮̳͗̉̏͂̀͋̋̄t̵̨̹͇̗̤̣͔̖̟͖͔̲͎̓̅̽͌̿̀͊̈́͗̇̈́ͅͅí̶̤̪ő̵̢̫n̴̨̨̨̨̫̪͎̖͈̩̙̫̻̉̓͌̃̏̆̀͘s̵̨̛̛͖̝̬̥̘̼͔͈̫̼̞̫̖̱͗͋̄̇́</h1>
+    <p>
+        <br>
+    </p>
+    <p>
+        <br>
+    </p>
+    <p>
+        <br>
+    </p>
+    <p>
+        <br>
+    </p>
+    <p>
+        <br>
+    </p>
+    <p>
+        <br>
+    </p>
+    <p>
+        <br>
+    </p>
+    <p>oþen tħħħħħħħ<br>th€€€€€-e-e-e-e--e-e-</p>
+    <h1>laptop</h1>
+    <p>and ħŋ↓→€ŧ¶ħ↓ŋ→“đ¶€ðħ”ŋ„↓€ðſħđ”ŋ→„€ðħ¶”đ↓ŋ→€¶ħ”“↓→ŋđ”€↓¶→↑Ħ‘’§ı↑€ŊĦı↓→ħŋ”“↓→þſ¶ħ”ŋ↓¶→þſ€ſħ”</p>
+</div>
+<div class="main" id="specs" style="display:none;">
+    <h1>t̷̢̟̭̣̤̃̋͠ḩ̵̺̩̜̩̽̑͋̈̆͛̃͗̂̇͋̐̓̉̚̕ͅȅ̴̡̻̼̝̝͇̺̭͍̻̼̯̜̼͔͎̹͈͙͕̙̱̫͙̘̮̺̝͉̥̹̣̤̠̂̄̀͗́̅̽̓̂͂͛̐̄̂̽̐̉̈́̈́͋̋̌̈́̋̄͂̃͂̀̓͌́̇̓͘͘̕̚̚͜͠͠ ̸͓̱͙̠͖͔̪̫͓̼̬̣̦̯̳̯̳͉͌̾̕l̸̘̤͊͒̋̽̄̈́̽̃̋̈̋͌́̈͒̅͗͋̆͗͆̏́͆̅͊͂̏͒͐̐̈́͘̚̕͘͝͝͠a̴̪̟̿͑͊͒͐̆̽͑̈͗̐͒̒̈̾͒̀͊̀͒̾͛̍̿͛̈́̑͋̐̐̊͑̓͑͌̀̈́̋̈́̕͝͠ͅp̶̡̢̧̡̢̢͔̫̠͙͙͕̘̮̳͎̯͓̬̻͓̪͍͎̟͎̙̪̺̼̙͕̤̮̩͙͉̘̦̯̣͆̓̈́̌̓̽̈͂͛̓̈́̄̀̿̉̔̎̒̊̔̀̌̏͑̚͘͜t̸̨̡̛͍̙̖͓̩̠̮̻̭̤̬̪̰̜̗̱̃̑̌͌̈́̈́̀͗̌̈́̀́́̿́̈́̒̀͛̊̌͆̈́̀͗̂̂̆̀͜͜͝͝ò̶̧̳̩̖̼͖͍͉̺̘͖̠̄̒̄̃̾͂͑̀̇̾̃̈͊̾̄̾̋͆̑̒̌̃̀̉̇̉̐̏̂̐̅̑͛̾͆̃̊̾̌͘͘͘̚͝͠͠͝p̶̧̢̢̧̧̼͍̰͉̤͉̦̩͉̩̗̤͈̼̰͍͈̪̘̤͇̺̩̬̳͖̫̥͇̙̤͓͕͈̤̫̼̖̜͑̎̆̓̾̊̓̉͊́̇͆͌̑̐͆̒̃͑́̑̈́͐̋̚͘̚̕ͅ</h1>
+</div>
+<div class="main" id="cool things" style="display:none;">
+    <h1>c</h1>
+    <h2>incoming call</h2>
+    <p style="text-align: left;">t</p>
+</div>
+<footer class="disclaimer" id="footer">
+    <div class="message-container">is anyone there?</div>
+</footer>
+</body>

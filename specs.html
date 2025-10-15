@@ -11,6 +11,7 @@
     <link rel="icon" type="image" href="/media/i67websiteicon.ico">
     <script src="navbar.js" type="module"></script>
     <script src="script.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 <body>
 <!-- fuck ass top bar -->
@@ -28,7 +29,7 @@
                 <a href="projects.html" class="menu-item">Projects</a>
                 <a href="specs.html" class="menu-item">Specs</a>
                 <a href="coolthings.html" class="menu-item">Cool Things</a>
-                <a href="blog.html" class="menu-item">Ice Blogs</a>
+                <a href="blogs.html" class="menu-item">Ice Blogs</a>
             </div>
         </div>
         <div class="nav-elements">
@@ -42,29 +43,32 @@
 <!-- crude implementation of leo's warning banner -->
 <div id="navbar-wip-banner" class="nav-banner-secondary nav-banner-hidden" role="alert" style="display:inherit;">
     <div class="nav-container nav-elements nav-banner-secondary" style="color:white; font-size:large;">
-        <span>WARNING: This site is very much a WIP, do contact me if you notice anything weird.</span>
+        <a href="https://github.com/icey67/icey67.github.io/issues">WARNING: This site is very much a WIP, report it to the website's repository issue page if you notice anything weird.</a>
         <span id="navbar-wip-dismiss" class="clickable">Dismiss X</span>
     </div>
 </div>
-<!-- it no no wanna go away after clicking and reloading ;-; -->
+<!-- ~~Firefox~~ scratch that, all browsers have that warning banner -->
+<div id="firefox-warning-banner" class="nav-banner-secondary nav-banner-hidden" role="alert" style="display:inherit;">
+    <div class="nav-container nav-elements nav-banner-secondary" style="color:white; font-size:large;">
+        <span>Heads up: This site uses audio automatically well enough, could you please add this site to your autoplay/sound whitelist? Thank you!</span>
+        <span id="firefox-warning-dismiss" class="clickable">Dismiss X</span>
+    </div>
+</div>
 <!-- fafer -->
 <div class="content">
     <section>
         <h1><span style="color: cyan">Icey</span>'s Computer Specifications</h1>
         <p>Don't bother rebuilding this, it's <i style="color:red;">bad</i>.</p>
-    </section>
-    <section>
         <ul>
             <li>CPU: AMD Phenom II X6 1090T</li>
             <li>GPU: AMD Radeon RX 6650 XT</li>
             <li>MOBO: ASRock (or ASUS??) M5A87</li>
-            <li>RAM: Off-brand DDR3 16GB 1333MHz (Overclocked to 1600MHz with ancient AMD EXPO)</li>
+            <li>RAM: Off-brand DDR3 16GB 1333MHz (once overclocked to 1600MHz with ancient AMD EXPO)</li>
             <li>PSU: MSI MAG A650GL 650W</li>
             <li>STORAGE 1: SanDisk SSD 1TB</li>
             <li>STORAGE 2: some Seagate Barracuda maybe? also 1TB</li>
             <li>STORAGE 3: DVD Drive <span style="font-size: 20px">optical media bad 100%</span></li>
             <li>OS: endeavourOS (WWWWW)</li>
-            <li>ADDITIONAL INFO; PCI <i style="font-size:20px">(yes jimmy not pciE)</i>: PCI WiFi Card because fuck (Courtesy by <span style="color: white; font-family: 'Fira Code', monospace;">eveee00</span>)</li>
         </ul>
     </section>
     <section>
@@ -83,6 +87,33 @@
             <br>
             Oh yeah, I'll also get a new case for this.
         </p>
+    </section>
+    <section>
+        <h1><span style="color: cyan;">Icey</span>'s laptop</h1>
+        <p>Oh yeah I guess I can tell a little something about my laptop too.<br>It's a bit of a more recent piece, but now due to modern aging, it's struggling as well.</p>
+        <ul>
+            <li>CPU: Intel Core i5 8265U</li>
+            <li>iGPU: Intel UHD Graphics 630</li>
+            <li>    <!-- here comes the ram -->
+                RAM TOTAL: 12GB DDR4-2400 SODIMM
+                <ul>
+                    <li>
+                        RAM 1: 4GB (Soldered)
+                    </li>
+                    <li>
+                        RAM 2: 8GB (Upgraded) (Courtesy by <span style="color: white; font-family: 'Fira Code', monospace;">eveee00</span>)
+                    </li>
+                </ul>
+            </li> <!-- here ends the ram -->
+            <li>STORAGE: Some Intel M.2 NVMe SSD at 512GB</li>
+            <li>
+                OSes: Dual boot Setup (oh?)
+                <ul>
+                    <li>Windows 11 (EUUUGHHH 🤮🤮🤮)</li>
+                    <li>endeavourOS (PEAKKKKK)</li>
+                </ul>
+            </li>
+        </ul>
     </section>
 </div>
 <footer>

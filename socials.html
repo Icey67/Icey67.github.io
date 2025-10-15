@@ -11,6 +11,7 @@
     <link rel="icon" type="image" href="/media/i67websiteicon.ico">
     <script src="navbar.js" type="module"></script>
     <script src="script.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 <body>
 <!-- fuck ass top bar -->
@@ -28,7 +29,7 @@
                 <a href="projects.html" class="menu-item">Projects</a>
                 <a href="specs.html" class="menu-item">Specs</a>
                 <a href="coolthings.html" class="menu-item">Cool Things</a>
-                <a href="blog.html" class="menu-item">Ice Blogs</a>
+                <a href="blogs.html" class="menu-item">Ice Blogs</a>
             </div>
         </div>
         <div class="nav-elements">
@@ -42,11 +43,17 @@
 <!-- crude implementation of leo's warning banner -->
 <div id="navbar-wip-banner" class="nav-banner-secondary nav-banner-hidden" role="alert" style="display:inherit;">
     <div class="nav-container nav-elements nav-banner-secondary" style="color:white; font-size:large;">
-        <span>WARNING: This site is very much a WIP, do contact me if you notice anything weird.</span>
+        <a href="https://github.com/icey67/icey67.github.io/issues">WARNING: This site is very much a WIP, report it to the website's repository issue page if you notice anything weird.</a>
         <span id="navbar-wip-dismiss" class="clickable">Dismiss X</span>
     </div>
 </div>
-<!-- it no no wanna go away after clicking and reloading ;-; -->
+<!-- ~~Firefox~~ scratch that, all browsers have that warning banner -->
+<div id="firefox-warning-banner" class="nav-banner-secondary nav-banner-hidden" role="alert" style="display:inherit;">
+    <div class="nav-container nav-elements nav-banner-secondary" style="color:white; font-size:large;">
+        <span>Heads up: This site uses audio automatically well enough, could you please add this site to your autoplay/sound whitelist? Thank you!</span>
+        <span id="firefox-warning-dismiss" class="clickable">Dismiss X</span>
+    </div>
+</div>
 <!-- fafer -->
 <div class="content">
     <section>
