@@ -421,7 +421,7 @@
 
 <body>
 <div class="topbar">
-    <img id="logo" src="/media/IC67Banner.png" title="IC67" onclick="window.open('https://github.com/icey67/i67ossecret')" style="cursor: pointer;">
+    <img id="logo" src="/media/IC67Banner.png" title="IC67" onclick="window.alert('the laptop should be somewhere soon')" style="cursor: pointer;">
     <img id="github" src="/media/github-mark-white.svg" title="My Github" onclick="document.getElementById('github').style['display'] = 'none';">
 </div>
 <div class="hamburger" onclick="toggleTabMenu()">☰</div>
@@ -433,9 +433,13 @@
     <a class="tab" href="#specs" onclick="showSection('specs', this)">§ƥ€ƈş</a>
     <a class="tab" href="#cool things" onclick="showSection('cool things', this)">¢øøł ŧĦĦĦ</a>
 </div>
-<audio autoplay loop>
+<audio id="lullaby" autoplay loop>
     <source src="/media/lullaby - vivivivivi.mp3" type="audio/mpeg">
 </audio>
+<script>
+    let aud = document.getElementById("lullaby");
+    aud.volume = 0.5;
+</script>
 <div class="main" id="home">
     <h1>1067</h1>
 </div>
