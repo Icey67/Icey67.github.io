@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Icey's OOPS!</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Odibee+Sans&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@300..700&display=swap" rel="stylesheet">
+    <link rel="icon" type="image" href="/media/i67websiteicon.ico">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+<h1>GAH!</h1>
+<h2>Error 404: Page not found</h2>
+<p id="errormessage">
+    You tried something that wasn't supposed to be done :V
+    <br>
+    <br>
+</p>
+<script>
+    let errormessage = document.getElementById("errormessage")
+    const link = document.createElement("a");
+    link.href = sessionStorage.getItem("lastTab")
+    link.innerHTML = "Better go back where you were before :P"
+    errormessage.appendChild(link)
+</script>
+</body>
+</html>
