@@ -408,14 +408,22 @@
 
     // auto start things
     document.addEventListener('DOMContentLoaded', function() {
+        if (sessionStorage.getItem('lastTab') == null) {
+            console.error("NO LAST TAB WAS RECORDED; FALLING BACK TO INDEX.")
+        }
         console.warn("IIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIII");
         console.warn("666");
         console.warn("s77777877777n");
+
     });
 
     // when reloading a second time return to normal
     if (performance.navigation.type === performance.navigation.TYPE_RELOAD) {
-        window.location.href = sessionStorage.getItem('lastTab');
+        if (sessionStorage.getItem('lastTab') == null) {
+            window.location.href = "/"
+        } else {
+            window.location.href = sessionStorage.getItem('lastTab');
+        }
     }
 </script>
 <script>

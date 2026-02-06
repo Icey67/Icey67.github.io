@@ -10,7 +10,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@300..700&display=swap" rel="stylesheet">
     <link rel="icon" type="image" href="/media/i67websiteicon.ico">
     <script src="navbar.js" type="module"></script>
-    <script src="discord-activity.js" type="module"></script>
+    <script src="discord-activity.js"></script>
     <script src="script.js"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
@@ -20,12 +20,12 @@
     <div class="nav-container">
         <div class="nav-elements">
             <div class="logo">
-                <a href="index.html"><img src="/media/IceyBanner.png" alt="Icey's Logo" class="logo-image"></a>
+                <a href="/"><img src="/media/IceyBanner.png" alt="Icey's Logo" class="logo-image"></a>
             </div>
         </div>
         <div class="nav-elements">
             <div class="menu">
-                <a href="index.html" class="menu-item">Home</a>
+                <a href="/" class="menu-item">Home</a>
                 <a href="socials.html" class="menu-item">Socials</a>
                 <a href="projects.html" class="menu-item">Projects</a>
                 <a href="specs.html" class="menu-item">Specs</a>
@@ -68,7 +68,10 @@
             <button id="twitch" onclick="window.open('https://www.twitch.tv/icey_67')"><img id="twitch" src="socialicons/twitch.svg" alt="chat"/>Twitch</button>
             <button id="bluesky" onclick="window.open('https://bsky.app/profile/icey67.bsky.social')"><img id="bluesky" src="socialicons/Bluesky.svg" alt="fly"/>Bluesky</button>
         </div>
-        <h2>Discord Activity:</h2>
+        <h2>Discord:</h2>
+        <div id="discordprofile">
+
+        </div>
         <div id="nowPlaying">
             <p>loading...</p>
         </div>
