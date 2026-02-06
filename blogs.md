@@ -11,6 +11,9 @@ title: Ice Blogs
 <p>
 <a href="{{ post.url }}">{{ post.title }}</a>
 - <small>Created on {{ post.date | date: "%B %d, %Y; %H:%M" }}</small>
+{% if post.updated_date %}
+// <small>Updated at {{ post.updated_date | date: "%B %d, %Y; %H:%M" }}</small>
+{% endif %}
 </p>
 </article>
 {% endfor %}
