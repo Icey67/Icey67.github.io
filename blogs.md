@@ -4,14 +4,16 @@ title: Ice Blogs
 ---
 
 
-<h1><span style="color: cyan">Icey</span>'s Weblog</h1>
+<h1>The <span style="color: cyan">Ice</span> Blogs</h1>
 <sub>Look ma! I'm a blogger! <i>she isn't proud.</i></sub>
-{% assign sorted_posts = site.posts | sort: 'date' %}
-{% for post in sorted_posts %}
+{% for post in site.posts %}
 <article>
 <p>
 <a href="{{ post.url }}">{{ post.title }}</a>
 - <small>Created on {{ post.date | date: "%B %d, %Y; %H:%M" }}</small>
+{% if post.updated_date %}
+// <small>Updated at {{ post.updated_date | date: "%B %d, %Y; %H:%M" }}</small>
+{% endif %}
 </p>
 </article>
 {% endfor %}
