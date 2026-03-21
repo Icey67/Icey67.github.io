@@ -12,6 +12,6 @@ with (import <nixpkgs> {}); let
 	buildInputs = [env ruby];
 	
 	shellHook = ''
-	  exec ${env}/bin/jekyll serve --watch
+	  exec ${env}/bin/jekyll serve --watch --livereload
 	'';
     }
