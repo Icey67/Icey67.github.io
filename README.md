@@ -1,2 +1,2 @@
 # Icey67.github.io
-a website, hopefully functional
+a website, probably not functional, but *a* website
